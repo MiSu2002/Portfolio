@@ -1,38 +1,241 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: Righteous;
+  src: url(./Righteous/Righteous-Regular.ttf);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: Dancing Script;
+  src: url(./Dancing_Script/DancingScript-VariableFont_wght.ttf);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.body{
+  /* background-color: rgb(27, 27, 27); */
+  background: url(./assets/5066999.jpg), rgb(0, 0, 0, 0.8);
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow-x: hidden;
+  background-blend-mode: multiply;
+  /* font-family: Righteous; */
+}
+
+.thisIs{
+  font-size: 3.5vmin;
+  /* font-family: Dancing Script; */
+  color: rgb(159, 250, 255);
+  text-shadow: 0.08rem 0.1rem rgba(180, 180, 180, 0.556);
+  animation: slide-up 1.5s;
+}
+
+.name{
+  /* font-family: Dancing Script; */
+  text-shadow: 0.25rem 0.15rem rgba(180, 180, 180, 0.56);
+  font-size: 10vmin;
+  color: rgb(255, 234, 116);
+  font-weight: 800;
+  animation: slide-up 3s;
+}
+
+.designation{
+  /* font-family: Dancing Script; */
+  font-size: 4.5vmin;
+  font-weight: 600;
+  color: rgb(159, 250, 255);
+  text-shadow: 0.13rem 0.1rem rgba(180, 180, 180, 0.56);
+  animation: slide-up 4.5s;
+}
+
+.main{
+  position: relative;
+  z-index: 3;
+}
+
+.about{
+  width: 75vmin;
+  font-family:  monospace;
+  color: rgb(69, 183, 105);
+  font-size: 1.8vmin;
+  margin-top: 8vh;
+  text-shadow: 0.1rem 0.05rem 0.1rem rgba(67, 67, 67, 0.895);
+  /* background: linear-gradient(to right, rgba(12, 88, 117, 0.5), rgba(12, 31, 117, 0.3)); */
+  line-height: 4vh;
+  animation: slide-up 5.5s;
+  text-align: justify;
+}
+
+.hello{
+  font-family:monospace;
+  font-size: 1.7vmin;
+  color: rgb(233, 233, 233);
+  animation: slide-right 1s;
+}
+.more{
+  margin-top: 7vh;
+  font-family: monospace;
+  font-size: 1.7vmin;
+  color: rgb(233, 233, 233);
+  text-shadow: 0.1rem 0.115rem 0.1rem #000;
+  animation: slide-up 8s;
+}
+
+.arrow{
+  margin-top: 6vh;
+  width: 4.5vmin;
+  height: 4.5vmin;
+  cursor: pointer;
+  /* animation: bounce 2s ease infinite; */
+  animation: slide-up-bounce 8s ease infinite;
+}
+
+.link{
+  font-size: 1.1vmin;
+  text-shadow: none;
+  color: rgb(252, 204, 255);
+  text-decoration: none;
+}
+
+.link:hover{
+  color: rgb(0, 255, 221);
+}
+
+@keyframes slide-right {
+  0% {
+    margin-left: 0.5rem;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@keyframes slide-up{
+  0%,70% {
+    visibility: hidden;
+  }
+  71%{
+    margin-top: 5.5rem;
+    visibility: visible;
+  }
 }
 
-.App-link {
-  color: #61dafb;
+@keyframes slide-up-bounce {
+  0%,70% {
+    visibility: hidden;
+  }
+    70% { transform:translateY(0%); }
+    71%{
+      margin-top: 5.5rem;
+      visibility: visible;
+    }
+    80% { transform:translateY(-15%); }
+    90% { transform:translateY(0%); }
+    95% { transform:translateY(-7%); }
+    97% { transform:translateY(0%); }
+    99% { transform:translateY(-3%); }
+    100% { transform:translateY(0); }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+li{
+  font-family: monospace;
+  font-size: 1.7vmin;
+  animation: slide-left 1.3s;
+}
+
+@keyframes slide-left {
+  0% {
+    margin-left: -1.5rem;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+.aboutMe{
+  background: url('./assets/combination-circuit-head-shape-artificial-intelligence-moral-electronic-world-illustration_456031-123.jpg.webp'), rgba(37, 37, 37, 0.95);
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow-x: hidden;
+  background-blend-mode: multiply;
+}
+
+.introduce{
+  /* font-family: monospace; */
+  font-size: 1.7vmin;
+  font-family: monospace;
+  color: rgb(233, 233, 233);
+}
+
+.var{
+  text-decoration: none;
+  color: rgb(0, 166, 255);
+  font-family: Dancing Script;
+}
+
+.equals{
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+.br1,.br2{
+  text-decoration: none;
+  color: rgb(255, 240, 164);
+}
+
+.dp{
+  /* margin-top: 10vh; */
+  /* border: 0.05rem solid rgb(255, 255, 255,0.9); */
+  box-shadow: 0.5rem 0.5rem 0.2rem 0.05rem rgba(255, 255, 255, 0.554);
+  animation: visible 3s;
+}
+
+.myself{
+  font-size: 2vmin;
+  font-family: monospace;
+  text-align: justify;
+  width: 85%;
+  line-height: 4vmin;
+  color: rgb(252, 255, 195);
+}
+
+@keyframes visible {
+  0%,50%{
+    visibility: hidden;
   }
+}
+
+.skill1, .skill2, .skill3, .skill4, .skill5, .skill6{
+  width: 80%;
+  border-radius: 5rem;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.skill1 p, .skill2 p, .skill3 p, .skill4 p, .skill5 p, .skill6 p{
+  border-radius: 5rem 0 0 5rem;
+  color: rgb(0, 21, 255);
+}
+
+.skill1 p{
+  background: linear-gradient(to right, rgb(255, 248, 176), rgb(161, 255, 255));
+  width: 85%;
+}
+
+.skill2 p{
+  background: linear-gradient(to right, rgb(255, 248, 176), rgb(216, 161, 255));
+  width: 80%;
+}
+
+.skill3 p{
+  background: linear-gradient(to right, rgb(255, 248, 176), rgb(161, 255, 161));
+  width: 90%;
+}
+
+.skill4 p{
+  background: linear-gradient(to right, rgb(255, 248, 176), rgb(255, 211, 161));
+  width: 92%;
+}
+
+.skill5 p{
+  background: linear-gradient(to right, rgb(255, 248, 176), rgb(255, 161, 161));
+  width: 85%;
+}
+
+.skill6 p{
+  background: linear-gradient(to right, rgb(255, 248, 176), rgb(255, 161, 252));
+  width: 75%;
 }
