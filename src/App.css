@@ -147,7 +147,7 @@ li{
 .aboutMe{
   background: url('./assets/combination-circuit-head-shape-artificial-intelligence-moral-electronic-world-illustration_456031-123.jpg.webp'), rgba(37, 37, 37, 0.95);
   background-repeat: no-repeat;
-  height: 175vmin;
+  height: 100vh;
   background-size: cover;
   background-attachment: fixed;
   overflow-x: hidden;
@@ -270,12 +270,12 @@ li{
 .interests{
   width: 90%;
   text-align: justify;
-  font-size: 1.8vmin;
+  font-size: 1.6vmin;
   color: rgb(0, 166, 255);
-  line-height: 4vmin;
+  line-height: 3vmin;
 }
 
 .lang{
-  font-size: 1.8vmin;
+  font-size: 1.6vmin;
   line-height: 3vmin;
 }

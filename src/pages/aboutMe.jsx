@@ -20,6 +20,35 @@ const aboutMe = (visible) => {
                 <br/>
                 Previously, I have worked in Front-end Development for Graphe, Kolkata, and Android App Development for AICTE-SmartInternz-Google. I have also attended a Forage Engineering Programme hosted by Goldman Sachs. I have also worked as the Core Team Program Lead for the Google Developer Student Clubs on our campus.
                 </h1>
+                <div className="row mt-4 mt-xl-5">
+                    <div className="col-6 d-none d-xl-block">
+                        <div className="container ms-4 ms-lg-5">
+                        <h1 className='skills text-warning mb-4'>I n t e r e s t s</h1>
+                        <p className='interests font-monospace'>Coding, Development, Research, Teaching, AI & ML, Social Working, Bug Hunting, Digital Art and Entrepreneurship.</p>
+                        </div>
+                        </div>
+                        <div className="col-6 d-none d-xl-block">
+                        <div className="container me-4 text-info">
+                        <h1 className='skills text-warning mb-4'>L a n g u a g e s</h1>
+                        <div className="row">
+                        <div className="col-5">
+                        <div className="lang font-monospace">ENGLISH (fluent)</div>
+                        </div>
+                        <div className="col-7">
+                        <div className="lang font-monospace">HINDI (native)</div>
+                        </div>
+                        </div>
+                        <div className="row">
+                        <div className="col-5">
+                        <div className="lang font-monospace">BENGALI (fluent)</div>
+                        </div>
+                        <div className="col-7">
+                        <div className="lang font-monospace">GUJARATI (intermediate)</div>
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+                </div>
                     </div>
                     <div className="col-5 d-flex justify-content-center">
                         <div className="container">
@@ -47,14 +76,14 @@ const aboutMe = (visible) => {
                 </div>
 
                 <div className="row mt-4 mt-xl-5">
-                    <div className="col-7">
+                    <div className="col-7 d-block d-xl-none">
                         <div className="container ms-4 ms-lg-5">
                         <h1 className='skills text-warning mb-4'>I n t e r e s t s</h1>
                         <p className='interests font-monospace'>Coding, Development, Research, Teaching, AI & ML, Social Working, Bug Hunting, Digital Art and Entrepreneurship.</p>
                         </div>
                         </div>
-                        <div className="col-5">
-                        <div className="container me-4 text-success">
+                        <div className="col-5 d-block d-xl-none">
+                        <div className="container me-4 text-info">
                         <h1 className='skills text-warning mb-4'>L a n g u a g e s</h1>
                         <div className="row">
                         <div className="col-5">
