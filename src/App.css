@@ -147,7 +147,7 @@ li{
 .aboutMe{
   background: url('./assets/combination-circuit-head-shape-artificial-intelligence-moral-electronic-world-illustration_456031-123.jpg.webp'), rgba(37, 37, 37, 0.95);
   background-repeat: no-repeat;
-  height: 100vh;
+  height: 175vmin;
   background-size: cover;
   background-attachment: fixed;
   overflow-x: hidden;
@@ -185,10 +185,10 @@ li{
 }
 
 .myself{
-  font-size: 2vmin;
+  font-size: 1.8vmin;
   font-family: monospace;
   text-align: justify;
-  width: 85%;
+  width: 90%;
   line-height: 4vmin;
   color: rgb(252, 255, 195);
 }
@@ -199,15 +199,27 @@ li{
   }
 }
 
-.skill1, .skill2, .skill3, .skill4, .skill5, .skill6{
-  width: 80%;
-  border-radius: 5rem;
-  background-color: rgba(255, 255, 255, 0.2);
+.skills{
+  font-size: 2.5vmin;
 }
 
-.skill1 p, .skill2 p, .skill3 p, .skill4 p, .skill5 p, .skill6 p{
+.tech-skills{
+  font-size: 1.8vmin;
+}
+
+.skill1, .skill2, .skill3, .skill4, .skill5, .skill6, .skill7, .skill8, .skill9{
+  width: 90%;
+  height: 2.5vmin;
+  border-radius: 5rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  font-size: 1vw;
+  line-height: 2.5vmin;
+}
+
+.skill1 p, .skill2 p, .skill3 p, .skill4 p, .skill5 p, .skill6 p, .skill7 p, .skill8 p, .skill9 p{
   border-radius: 5rem 0 0 5rem;
   color: rgb(0, 21, 255);
+  height: 2.5vmin;
 }
 
 .skill1 p{
@@ -238,4 +250,32 @@ li{
 .skill6 p{
   background: linear-gradient(to right, rgb(255, 248, 176), rgb(255, 161, 252));
   width: 75%;
+}
+
+.skill7 p{
+  background: linear-gradient(to right, rgb(255, 248, 176), rgb(255, 161, 217));
+  width: 85%;
+}
+
+.skill8 p{
+  background: linear-gradient(to right, rgb(255, 248, 176), rgb(161, 255, 231));
+  width: 87%;
+}
+
+.skill9 p{
+  background: linear-gradient(to right, rgb(255, 248, 176), rgb(161, 161, 255));
+  width: 78%;
+}
+
+.interests{
+  width: 90%;
+  text-align: justify;
+  font-size: 1.8vmin;
+  color: rgb(0, 166, 255);
+  line-height: 4vmin;
+}
+
+.lang{
+  font-size: 1.8vmin;
+  line-height: 3vmin;
 }

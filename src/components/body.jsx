@@ -27,7 +27,7 @@ const Body = () => {
                 <p className="more">Want to know more about me? <a className="link">Scroll Down</a></p>
                 </div>
                 <div className="col-2 d-flex justify-content-end">
-                    <img src={arrow} className="arrow"/>
+                    {/* <img src={arrow} className="arrow"/> */}
                 </div>
             </div>
             </h1>
