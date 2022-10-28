@@ -12,17 +12,17 @@ const Body = () => {
             <div className="col-12 col-xl-8">
             <div className="container d-flex justify-content-center justify-content-lg-start p-0 pt-5 p-xxl-5 ms-xl-4 ms-xxl-5">
             <h1 className="text">
-            <p className="thisIs mt-md-3 mt-xl-5"><p className="var me-2">var</p> Hi, I'm <p className="ms-1 equals text-light"> =</p> </p>
+            <p className="thisIs mt-md-3 mt-xl-5 list-group list-group-horizontal"><p className="var me-2">var</p>&nbsp;Hi, I'm<p className="ms-1 equals text-light">&nbsp;=</p> </p>
             <p className="name mt-5">Soumita Basu</p>
-            <p className="designation"><p className="br1">(</p> College Student <p className="br2">)</p><p className="text-light">;</p></p>
+            <p className="designation list-group list-group-horizontal"><p className="br1">(</p>&nbsp;College Student&nbsp;<p className="br2">)</p><p className="text-light">;</p></p>
             {/* eslint-disable-next-line */}
             <p className="about">
-            /* A hardworking and dedicated student pursuing Bachelor of Technology in Computer Science and Engineering with around 1.5 years of experience in Web Development and Cloud Computing and with p deep interest in Entrepreneurship. */
+            /* A hardworking and dedicated student pursuing Bachelor of Technology in Computer Science and Engineering with around 1.5 years of experience in Web Development and Cloud Computing and with a deep interest in Entrepreneurship. */
             </p>
 
             <div className="row g-0 m-0 p-0">
                 <div className="col-10 d-flex">
-                <p className="more">Want to know more about me? <p className="link">Scroll Down</p></p>
+                <p className="more list-group list-group-horizontal">Want to know more about me? <p className="link mt-1 ms-2">Scroll Down</p></p>
                 </div>
                 <div className="col-2 d-flex justify-content-end">
                     {/* <img src={arrow} className="arrow"/> */}
