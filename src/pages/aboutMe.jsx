@@ -54,6 +54,7 @@ const aboutMe = (visible) => {
                         <div className="container">
                         <h1 className='skills text-warning'>S k i l l s</h1>
                         
+                        {/* eslint-disable-next-line */}
                         <h2 className='tech-skills mt-4 mt-md-5 text-success font-monospace'>/* Technical Skills */</h2>
                         <div className="skill1 mt-3 mt-md-4 fw-semibold"><p>&nbsp;&nbsp;&nbsp;Full-Stack Web Development (MERN Stack)</p></div>
                         <div className="skill2 mt-2 mt-xl-3 fw-semibold"><p>&nbsp;&nbsp;&nbsp;Android App Development with Kotlin</p></div>
@@ -65,6 +66,7 @@ const aboutMe = (visible) => {
                         <div className="skill8 mt-2 mt-xl-3 fw-semibold"><p>&nbsp;&nbsp;&nbsp;Cloud Computing</p></div>
                         <div className="skill9 mt-2 mt-xl-3 fw-semibold"><p>&nbsp;&nbsp;&nbsp;Ethical Hacking</p></div>
 
+                        {/* eslint-disable-next-line */}
                         <h2 className='tech-skills mt-4 mt-md-5 text-success font-monospace'>/* Other Skills */</h2>
                         <div className="skill4 mt-3 mt-md-4 fw-semibold"><p>&nbsp;&nbsp;&nbsp;Leadership</p></div>
                         <div className="skill6 mt-2 mt-xl-3 fw-semibold"><p>&nbsp;&nbsp;&nbsp;Time Management</p></div>

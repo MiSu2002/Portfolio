@@ -1,11 +1,11 @@
 @font-face {
   font-family: Righteous;
-  src: url(./Righteous/Righteous-Regular.ttf);
+  src: url(./assets/Righteous/Righteous-Regular.ttf);
 }
 
 @font-face {
   font-family: Dancing Script;
-  src: url(./Dancing_Script/DancingScript-VariableFont_wght.ttf);
+  src: url(./assets/Dancing_Script/DancingScript-VariableFont_wght.ttf);
 }
 
 .body{
