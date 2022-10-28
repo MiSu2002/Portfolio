@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "./Navbar";
+import { Link } from "react-router-dom";
 import dp from "../assets/dp.jpg";
 
 const Body = () => {
@@ -7,7 +8,7 @@ const Body = () => {
         <div className="body">
         <Navbar/>
         <div className="main">
-        <p className="hello m-0 mt-lg-5 ms-5">- Hello, World!</p>
+        <p className="hello m-0 mt-5 ms-5">- Hello, World!</p>
         <div className="row g-0 p-0 ms-lg-3">
             <div className="col-12 col-xl-8">
             <div className="container d-flex justify-content-center justify-content-lg-start p-0 pt-5 p-xxl-5 ms-xl-4 ms-xxl-5">
@@ -22,7 +23,7 @@ const Body = () => {
 
             <div className="row g-0 m-0 p-0">
                 <div className="col-10 d-flex">
-                <p className="more list-group list-group-horizontal">Want to know more about me? <p className="link mt-1 ms-2">Scroll Down</p></p>
+                <p className="more list-group list-group-horizontal">Want to know more about me? <Link to="/about" className="link mt-1 ms-2">Click Here</Link></p>
                 </div>
                 <div className="col-2 d-flex justify-content-end">
                     {/* <img src={arrow} className="arrow"/> */}

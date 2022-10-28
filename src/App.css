@@ -8,6 +8,11 @@
   src: url(./assets/Dancing_Script/DancingScript-VariableFont_wght.ttf);
 }
 
+body{
+  margin: 0;
+  padding: 0;
+}
+
 .body{
   /* background-color: rgb(27, 27, 27); */
   background: url(./assets/5066999.jpg), rgb(0, 0, 0, 0.8);
@@ -21,7 +26,7 @@
 }
 
 .thisIs{
-  font-size: 3.5vmin;
+  font-size: calc(1.5rem + 1vw);
   /* font-family: Dancing Script; */
   color: rgb(159, 250, 255);
   text-shadow: 0.08rem 0.1rem rgba(180, 180, 180, 0.556);
@@ -31,7 +36,7 @@
 .name{
   /* font-family: Dancing Script; */
   text-shadow: 0.25rem 0.15rem rgba(180, 180, 180, 0.56);
-  font-size: 10vmin;
+  font-size: calc(3rem + 3vw);
   color: rgb(255, 234, 116);
   font-weight: 800;
   animation: slide-up 3s;
@@ -39,7 +44,7 @@
 
 .designation{
   /* font-family: Dancing Script; */
-  font-size: 4.5vmin;
+  font-size: calc(1.3rem + 2vw);
   font-weight: 600;
   color: rgb(159, 250, 255);
   text-shadow: 0.13rem 0.1rem rgba(180, 180, 180, 0.56);
@@ -55,7 +60,7 @@
   width: 75vmin;
   font-family:  monospace;
   color: rgb(69, 183, 105);
-  font-size: 1.8vmin;
+  font-size: calc(0.7rem + 0.7vw);
   margin-top: 8vh;
   text-shadow: 0.1rem 0.05rem 0.1rem rgba(67, 67, 67, 0.895);
   /* background: linear-gradient(to right, rgba(12, 88, 117, 0.5), rgba(12, 31, 117, 0.3)); */
@@ -66,30 +71,30 @@
 
 .hello{
   font-family:monospace;
-  font-size: 1.7vmin;
+  font-size: calc(0.7rem + 0.5vw);
   color: rgb(233, 233, 233);
   animation: slide-right 1s;
 }
 .more{
   margin-top: 7vh;
   font-family: monospace;
-  font-size: 1.7vmin;
+  font-size: calc(0.7rem + 0.5vw);
   color: rgb(233, 233, 233);
   text-shadow: 0.1rem 0.115rem 0.1rem #000;
   animation: slide-up 8s;
 }
 
-.arrow{
+/* .arrow{
   margin-top: 6vh;
   width: 4.5vmin;
   height: 4.5vmin;
   cursor: pointer;
-  /* animation: bounce 2s ease infinite; */
+  animation: bounce 2s ease infinite;
   animation: slide-up-bounce 8s ease infinite;
-}
+} */
 
 .link{
-  font-size: 1.1vmin;
+  font-size: calc(0.5rem + 0.3vw);
   text-shadow: none;
   color: rgb(252, 204, 255);
   text-decoration: none;
@@ -134,7 +139,7 @@
 
 li{
   font-family: monospace;
-  font-size: 1.7vmin;
+  font-size: calc(0.7rem + 0.5vw);
   animation: slide-left 1.3s;
 }
 
