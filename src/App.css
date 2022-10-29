@@ -75,6 +75,13 @@ body{
   color: rgb(233, 233, 233);
   animation: slide-right 1s;
 }
+
+.toggle, .toggle:hover{
+  background-color: transparent;
+  color: transparent;
+  border: transparent;
+}
+
 .more{
   margin-top: 7vh;
   font-family: monospace;
@@ -83,15 +90,6 @@ body{
   text-shadow: 0.1rem 0.115rem 0.1rem #000;
   animation: slide-up 8s;
 }
-
-/* .arrow{
-  margin-top: 6vh;
-  width: 4.5vmin;
-  height: 4.5vmin;
-  cursor: pointer;
-  animation: bounce 2s ease infinite;
-  animation: slide-up-bounce 8s ease infinite;
-} */
 
 .link{
   font-size: calc(0.5rem + 0.3vw);
@@ -161,7 +159,7 @@ li{
 
 .introduce{
   /* font-family: monospace; */
-  font-size: 1.7vmin;
+  font-size: calc(0.7rem + 0.5vw);
   font-family: monospace;
   color: rgb(233, 233, 233);
 }
@@ -183,14 +181,13 @@ li{
 }
 
 .dp{
-  /* margin-top: 10vh; */
-  /* border: 0.05rem solid rgb(255, 255, 255,0.9); */
-  box-shadow: 0.5rem 0.5rem 0.2rem 0.05rem rgba(255, 255, 255, 0.554);
+  box-shadow: 0.5rem 0.5rem 0.2rem 0.05rem rgba(109, 109, 109, 0.554);
+  height: 70vh;
   animation: visible 3s;
 }
 
 .myself{
-  font-size: 1.8vmin;
+  font-size: calc(0.5rem + 0.7vw);
   font-family: monospace;
   text-align: justify;
   width: 90%;
@@ -205,26 +202,35 @@ li{
 }
 
 .skills{
-  font-size: 2.5vmin;
+  font-size: calc(1rem + 1.2vw);
 }
 
 .tech-skills{
-  font-size: 1.8vmin;
+  font-size: calc(0.7rem + 0.8vw);
+}
+
+.skill-text{
+  top: 50%;
+  position: absolute;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 87%;
 }
 
 .skill1, .skill2, .skill3, .skill4, .skill5, .skill6, .skill7, .skill8, .skill9{
   width: 90%;
-  height: 2.5vmin;
+  height: 4vmin;
   border-radius: 5rem;
+  position: relative;
   background-color: rgba(255, 255, 255, 0.2);
-  font-size: 1vw;
-  line-height: 2.5vmin;
+  font-size: calc(0.1rem + 1vw);
+  line-height: 2vmin;
 }
 
 .skill1 p, .skill2 p, .skill3 p, .skill4 p, .skill5 p, .skill6 p, .skill7 p, .skill8 p, .skill9 p{
   border-radius: 5rem 0 0 5rem;
   color: rgb(0, 21, 255);
-  height: 2.5vmin;
+  height: 100%;
 }
 
 .skill1 p{
@@ -275,12 +281,12 @@ li{
 .interests{
   width: 90%;
   text-align: justify;
-  font-size: 1.6vmin;
+  font-size: calc(0.3rem + 1vw);
   color: rgb(0, 166, 255);
   line-height: 3vmin;
 }
 
 .lang{
-  font-size: 1.6vmin;
+  font-size: calc(0.3rem + 1vw);
   line-height: 3vmin;
 }
