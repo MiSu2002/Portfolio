@@ -1,9 +1,4 @@
 @font-face {
-  font-family: Righteous;
-  src: url(./assets/Righteous/Righteous-Regular.ttf);
-}
-
-@font-face {
   font-family: Dancing Script;
   src: url(./assets/Dancing_Script/DancingScript-VariableFont_wght.ttf);
 }
@@ -308,4 +303,14 @@ li{
   background-size: cover;
   width: 100%;
   overflow-x: hidden;
+}
+
+.contactMe{
+  background: url(./assets/contact-backg.jpg), rgb(0, 0, 0, 0.8);
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow-x: hidden;
+  background-blend-mode: multiply;
 }
