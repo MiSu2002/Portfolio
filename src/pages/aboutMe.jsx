@@ -1,5 +1,4 @@
 import React from 'react';
-import '../App.css';
 import Navbar from "../components//Navbar";
 import DropdownMenu from "../components/Dropdown-menu";
 import { Link } from "react-router-dom";

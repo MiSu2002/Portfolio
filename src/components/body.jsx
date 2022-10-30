@@ -36,7 +36,6 @@ const Body = () => {
                 <p className="more list-group list-group-horizontal">Want to know more about me? <Link to="/about" className="link mt-1 ms-2">Click Here</Link></p>
                 </div>
                 <div className="col-2 d-flex justify-content-end">
-                    {/* <img src={arrow} className="arrow"/> */}
                 </div>
             </div>
             </h1>
@@ -44,8 +43,6 @@ const Body = () => {
             </div>
             <div className=" d-none d-xl-block col-xl-4 mt-5 d-flex justify-content-xxl-center justify-content-xl-center">
                 <img src={dp} className="dp ms-4" alt="Soumita Basu"/>
-                {/* <img src={dp1} className="dp d-none d-xxl-block mt-5"/> */}
-                {/* <img src={dp2} width={320}/> */}
             </div>
         </div>
         </div>

@@ -15,9 +15,9 @@ const DropdownMenu = () => {
         <Dropdown.Item><Link to="/" className="nav-link">Home</Link></Dropdown.Item>
         <Dropdown.Item><Link to="/about" className="nav-link">About Me</Link></Dropdown.Item>
         <Dropdown.Item><Link to="/ed" className="nav-link">Education</Link></Dropdown.Item>
-        <Dropdown.Item><Link to="/career" className="nav-link">Career</Link></Dropdown.Item>
-        <Dropdown.Item><Link to="/achievements" className="nav-link">Achievements</Link></Dropdown.Item>
-        <Dropdown.Item><Link to="/contact" className="nav-link">Contact Me</Link></Dropdown.Item>
+        {/* <Dropdown.Item><Link to="/career" className="nav-link">Career</Link></Dropdown.Item>
+        <Dropdown.Item><Link to="/projects" className="nav-link">Projects</Link></Dropdown.Item>
+        <Dropdown.Item><Link to="/contact" className="nav-link">Contact Me</Link></Dropdown.Item> */}
       </Dropdown.Menu>
     </Dropdown>
 

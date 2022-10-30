@@ -14,27 +14,23 @@ body{
 }
 
 .body{
-  /* background-color: rgb(27, 27, 27); */
-  background: url(./assets/5066999.jpg), rgb(0, 0, 0, 0.8);
+  background: url(./assets/home-backg.jpg), rgb(0, 0, 0, 0.8);
   background-repeat: no-repeat;
   height: 100vh;
   background-size: cover;
   background-attachment: fixed;
   overflow-x: hidden;
   background-blend-mode: multiply;
-  /* font-family: Righteous; */
 }
 
 .thisIs{
   font-size: calc(1.5rem + 1vw);
-  /* font-family: Dancing Script; */
   color: rgb(159, 250, 255);
   text-shadow: 0.08rem 0.1rem rgba(180, 180, 180, 0.556);
   animation: slide-up 1.5s;
 }
 
 .name{
-  /* font-family: Dancing Script; */
   text-shadow: 0.25rem 0.15rem rgba(180, 180, 180, 0.56);
   font-size: calc(3rem + 3vw);
   color: rgb(255, 234, 116);
@@ -43,7 +39,6 @@ body{
 }
 
 .designation{
-  /* font-family: Dancing Script; */
   font-size: calc(1.3rem + 2vw);
   font-weight: 600;
   color: rgb(159, 250, 255);
@@ -63,7 +58,6 @@ body{
   font-size: calc(0.7rem + 0.7vw);
   margin-top: 8vh;
   text-shadow: 0.1rem 0.05rem 0.1rem rgba(67, 67, 67, 0.895);
-  /* background: linear-gradient(to right, rgba(12, 88, 117, 0.5), rgba(12, 31, 117, 0.3)); */
   line-height: 4vh;
   animation: slide-up 5.5s;
   text-align: justify;
@@ -85,7 +79,7 @@ body{
 .more{
   margin-top: 7vh;
   font-family: monospace;
-  font-size: calc(0.7rem + 0.5vw);
+  font-size: calc(0.6rem + 0.5vw);
   color: rgb(233, 233, 233);
   text-shadow: 0.1rem 0.115rem 0.1rem #000;
   animation: slide-up 8s;
@@ -96,6 +90,7 @@ body{
   text-shadow: none;
   color: rgb(252, 204, 255);
   text-decoration: none;
+  cursor: pointer;
 }
 
 .link:hover{
@@ -148,7 +143,7 @@ li{
 }
 
 .aboutMe{
-  background: url('./assets/combination-circuit-head-shape-artificial-intelligence-moral-electronic-world-illustration_456031-123.jpg.webp'), rgba(37, 37, 37, 0.95);
+  background: url('./assets/about-backg.webp'), rgba(37, 37, 37, 0.95);
   background-repeat: no-repeat;
   height: 100vh;
   background-size: cover;
@@ -279,7 +274,7 @@ li{
 }
 
 .interests{
-  width: 90%;
+  width: 80%;
   text-align: justify;
   font-size: calc(0.3rem + 1vw);
   color: rgb(0, 166, 255);
@@ -289,4 +284,28 @@ li{
 .lang{
   font-size: calc(0.3rem + 1vw);
   line-height: 3vmin;
+}
+
+.ed{
+  background: url(./assets/education-backg.jpg), rgb(0, 0, 0, 0.8);
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow-x: hidden;
+  background-blend-mode: multiply;
+}
+
+.achievements h4{
+  color: rgb(255, 223, 164);
+  line-height: 4vmin;
+}
+
+.transcripts{
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  overflow-x: hidden;
 }

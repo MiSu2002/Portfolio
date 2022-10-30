@@ -9,7 +9,7 @@ const Navbar = () => {
     <ul className="navbar-nav list-group list-group-horizontal d-flex justify-content-xl-end justify-content-center ms-5 ms-xl-0 me-xl-3">
       
       <li className="nav-item me-5">
-      <NavLink to="/" className="nav-link">
+      <NavLink to="/" className="nav-link text-info">
         Home
         </NavLink>
       </li>
@@ -18,17 +18,17 @@ const Navbar = () => {
         <NavLink to="/about" className="nav-link">About Me</NavLink>
       </li>
       <li className="nav-item me-5">
-        <p className="nav-link">Education</p> 
+        <NavLink to="/ed" className="nav-link">Education</NavLink> 
       </li>
-      <li className="nav-item me-5">
+      {/* <li className="nav-item me-5">
         <p className="nav-link">Career</p> 
       </li>
       <li className="nav-item me-5">
-        <p className="nav-link">Achievements</p> 
+        <p className="nav-link">Projects</p> 
       </li>
       <li className="nav-item me-5">
         <p className="nav-link">Contact Me</p> 
-      </li>
+      </li> */}
     </ul>
 </nav>
     )
