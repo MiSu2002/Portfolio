@@ -314,3 +314,14 @@ li{
   overflow-x: hidden;
   background-blend-mode: multiply;
 }
+
+#btnID{
+  border: 0.1rem solid rgb(0, 190, 190);
+  border-radius: 1vw;
+  background-color: rgb(170, 244, 255);
+  opacity: 0.8;
+}
+.bot-btn{
+  width: 4vw;
+  cursor: pointer;
+}

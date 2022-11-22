@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import dp from "../assets/dp.jpg";
 
 const Body = () => {
+
     return(
         <div className="body">
         <Navbar/>
@@ -19,7 +20,7 @@ const Body = () => {
                 </div>
             </div>
         </div>
-        <div className="row g-0 p-0 ms-lg-3">
+        <div className="row g-0 p-5 justify-content-center ms-lg-3">
             <div className="col-12 col-xl-8">
             <div className="container d-flex justify-content-center justify-content-xl-start p-0 pt-5 p-xxl-5 ms-xl-4 ms-xxl-5">
             <h1 className="text">
