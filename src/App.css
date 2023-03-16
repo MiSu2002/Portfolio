@@ -3,81 +3,67 @@
   src: url(./assets/Dancing_Script/DancingScript-VariableFont_wght.ttf);
 }
 
+@font-face {
+  font-family: Poppins;
+  src: url(./assets/Poppins/Poppins-Light.ttf);
+}
+
 body{
   margin: 0;
   padding: 0;
 }
 
-.body{
-  background: url(./assets/home-backg.jpg), rgb(0, 0, 0, 0.8);
-  background-repeat: no-repeat;
+.home{
+  background-color: #121212;
   height: 100vh;
-  background-size: cover;
-  background-attachment: fixed;
   overflow-x: hidden;
-  background-blend-mode: multiply;
-}
-
-.thisIs{
-  font-size: calc(1.5rem + 1vw);
-  color: rgb(159, 250, 255);
-  text-shadow: 0.08rem 0.1rem rgba(180, 180, 180, 0.556);
-  animation: slide-up 1.5s;
+  font-family: Poppins;
 }
 
 .name{
-  text-shadow: 0.25rem 0.15rem rgba(180, 180, 180, 0.56);
-  font-size: calc(3rem + 3vw);
-  color: rgb(255, 234, 116);
-  font-weight: 800;
-  animation: slide-up 3s;
+  font-size: calc(2rem + 2vw);
+  color: #fff;
+  margin-top: 30vh;
+  animation: appear 2s;
 }
 
-.designation{
-  font-size: calc(1.3rem + 2vw);
-  font-weight: 600;
-  color: rgb(159, 250, 255);
-  text-shadow: 0.13rem 0.1rem rgba(180, 180, 180, 0.56);
-  animation: slide-up 4.5s;
+.line{
+  height: 0.2vh;
+  margin-top: -1.5vh;
+  background-color: teal;
+  width: calc(20rem + 15vw);
+  margin-left: auto;
+  margin-right: auto;
+  animation: appear 3s;
 }
 
-.main{
-  position: relative;
-  z-index: 3;
-}
-
-.about{
-  width: 75vmin;
-  font-family:  monospace;
-  color: rgb(69, 183, 105);
-  font-size: calc(0.7rem + 0.7vw);
-  margin-top: 8vh;
-  text-shadow: 0.1rem 0.05rem 0.1rem rgba(67, 67, 67, 0.895);
-  line-height: 4vh;
-  animation: slide-up 5.5s;
-  text-align: justify;
+.overview{
+  color: #fff;
+  font-size: calc(0.6rem + 0.5vw);
+  letter-spacing: 3px;
+  word-spacing: 2px;
+  animation: appear 4s;
 }
 
 .hello{
-  font-family:monospace;
-  font-size: calc(0.7rem + 0.5vw);
-  color: rgb(233, 233, 233);
-  animation: slide-right 1s;
-}
-
-.toggle, .toggle:hover{
-  background-color: transparent;
-  color: transparent;
-  border: transparent;
-}
-
-.more{
-  margin-top: 7vh;
   font-family: monospace;
   font-size: calc(0.6rem + 0.5vw);
-  color: rgb(233, 233, 233);
-  text-shadow: 0.1rem 0.115rem 0.1rem #000;
-  animation: slide-up 8s;
+  color: rgb(30, 165, 165, 0.721);
+  animation: appear 1s;
+  margin-left: -3vh;
+  margin-top: 70vh;
+  rotate: -90deg;
+}
+
+.logo {
+  border-left: 2px solid teal;
+  height: calc(1rem + 0.7vw);
+  color: #fff;
+  -webkit-animation: appear 1s;
+  animation: appear 1s;
+  font-size: calc(0.6rem + 0.5vw);
+  letter-spacing: 2px;
+  font-family: Poppins;
 }
 
 .link{
@@ -92,43 +78,21 @@ body{
   color: rgb(0, 255, 221);
 }
 
-@keyframes slide-right {
-  0% {
-    margin-left: 0.5rem;
+@-webkit-keyframes appear {
+  0%, 50% {
+    opacity: 0;
   }
 }
 
-@keyframes slide-up{
-  0%,70% {
-    visibility: hidden;
+@keyframes appear {
+  0%, 50% {
+    opacity: 0;
   }
-  71%{
-    margin-top: 5.5rem;
-    visibility: visible;
-  }
-}
-
-@keyframes slide-up-bounce {
-  0%,70% {
-    visibility: hidden;
-  }
-    70% { transform:translateY(0%); }
-    71%{
-      margin-top: 5.5rem;
-      visibility: visible;
-    }
-    80% { transform:translateY(-15%); }
-    90% { transform:translateY(0%); }
-    95% { transform:translateY(-7%); }
-    97% { transform:translateY(0%); }
-    99% { transform:translateY(-3%); }
-    100% { transform:translateY(0); }
 }
 
 li{
-  font-family: monospace;
   font-size: calc(0.7rem + 0.5vw);
-  animation: slide-left 1.3s;
+  animation: appear 3s;
 }
 
 @keyframes slide-left {
