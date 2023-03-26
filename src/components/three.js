@@ -21,7 +21,6 @@ const ThreeScene = () => {
       const material = new THREE.MeshPhongMaterial({ color: 0x00feee, transparent: true, opacity: 0.3});
       const cube1 = new THREE.Mesh(geometry, material);
       cube1.position.z = -2.5; // move the cube further away from the camera
-      cube1.position.y = 0.2;
       scene.add(cube1);
 
       const animate = function () {
@@ -31,7 +30,7 @@ const ThreeScene = () => {
         renderer.render(scene, camera);
       };
       animate();
-    }, 4000);
+    }, 3000);
 
     const handleResize = function () {
       const width = window.innerWidth;
@@ -55,7 +54,7 @@ const ThreeScene = () => {
   }, []);
 
   return (
-    <div ref={mount} />
+    <div ref={mount} style={{marginTop: '-6vh'}}/>
   );
 }
 

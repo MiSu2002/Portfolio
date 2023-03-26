@@ -1,23 +1,29 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-const Navbar = () => {
-
+const Navbar = ({ activeLink }) => {
+    
+    const handleAboutClick = () => {
+      const aboutSection = document.getElementById('about');
+      window.scrollTo({
+        top: aboutSection.offsetTop - (window.innerHeight * 0.3),
+        behavior: 'smooth'
+      });
+    };
+  
     return (
-        <div className="d-none d-xxl-block">
-            <nav className="navbar navbar-dark d-flex mt-3">
-            <p className="ms-4 ms-lg-5 logo ps-2">Portfolio</p>
-            <ul className="navbar-nav list-group list-group-horizontal d-flex justify-content-xl-end justify-content-center ms-5 ms-xl-0 me-xl-3">
-
-                <li className="nav-item me-5">
-                    <NavLink to="/" className="nav-link">
-                        Home
-                    </NavLink>
-                </li>
-
-                <li className="nav-item me-5">
-                    <NavLink to="/about" className="nav-link">About</NavLink>
-                </li>
+      <nav className="navbar navbar-dark d-none d-xxl-block p-0">
+        <ul className="navbar-nav list-group list-group-horizontal d-flex justify-content-end">
+        <li className="nav-item me-5">
+          <a href="#home" className={`nav-link ${activeLink === 'home' ? 'active' : ''}`}>
+            Home
+          </a>
+        </li>
+        <li className="nav-item me-5">
+          <a onClick={handleAboutClick} href="#about" className={`nav-link ${activeLink === 'about' ? 'active' : ''}`}>
+            About
+          </a>
+        </li>
                 <li className="nav-item me-5">
                     <NavLink to="/ed" className="nav-link">Education</NavLink>
                 </li>
@@ -32,7 +38,6 @@ const Navbar = () => {
                 </li>
             </ul>
         </nav>
-        </div>
     )
 }
 

@@ -3,7 +3,7 @@ import Navbar from "../components//Navbar";
 import DropdownMenu from "../components/Dropdown-menu";
 import { Link } from "react-router-dom";
 
-const aboutMe = () => {
+const About = () => {
     return (
         <div className='aboutMe'>
             <Navbar />
@@ -187,4 +187,4 @@ const aboutMe = () => {
     )
 }
 
-export default aboutMe;
+export default About;

@@ -1,21 +1,40 @@
 import './App.css';
+import React, { useState, useEffect } from 'react';
 import Body from './components/body';
-import AboutMe from './pages/aboutMe';
-import Education from './pages/Education';
-import Transcripts from './pages/transcripts';
-import Contact from './pages/contact';
-import { Route, Routes } from "react-router-dom";
+import About from './components/about';
+import Navbar from './components/Navbar';
+import DropdownMenu from './components/Dropdown-menu';
 
 function App() {
+  const [page, setPage] = useState('home');
+
+  useEffect(() => {
+    const handlePageChange = () => {
+      const pageHeight = document.body.scrollHeight;
+      if (pageHeight > window.innerHeight * 1.2) {
+        setPage('about');
+      } else if (pageHeight <= window.innerHeight * 1.2) {
+        setPage('home');
+      }
+    };
+
+    window.addEventListener('scroll', handlePageChange);
+    return () => window.removeEventListener('scroll', handlePageChange);
+  }, []);
+
   return (
     <div className="App">
-      <Routes>
-      <Route path = "/" element={<Body/>}/>
-      <Route path = "/about" element={<AboutMe/>}/>
-      <Route path = "/ed" element={<Education/>}/>
-      <Route path = "/transcripts" element={<Transcripts/>}/>
-      <Route path = "/contact" element={<Contact/>}/>
-      </Routes>
+      <div className="row g-0 w-100 position-fixed" style={{background: '#15151550', zIndex: 91}}>
+        <div className="col-4 p-0 mt-3" style={{zIndex: 91}}>
+        <p className="ms-4 ms-lg-5 mt-2 logo ps-2">Portfolio</p>
+        </div>
+        <div className="col p-0 d-flex justify-content-end mt-3" style={{zIndex: 91}}>
+        <Navbar activeLink={page}/>
+        <DropdownMenu/>
+        </div>
+      </div>
+      <Body/>
+      <About/>
     </div>
   );
 }

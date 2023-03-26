@@ -1,9 +1,4 @@
 @font-face {
-  font-family: Dancing Script;
-  src: url(./assets/Dancing_Script/DancingScript-VariableFont_wght.ttf);
-}
-
-@font-face {
   font-family: Poppins;
   src: url(./assets/Poppins/Poppins-Light.ttf);
 }
@@ -11,19 +6,19 @@
 body{
   margin: 0;
   padding: 0;
+  font-family: Poppins;
+  background-color: #151515;
+  overflow-x: hidden;
 }
 
 .home{
-  background-color: #121212;
-  height: 100vh;
-  overflow-x: hidden;
-  font-family: Poppins;
+  height: 120vh;
 }
 
 .name{
   font-size: calc(2rem + 2vw);
   color: #fff;
-  margin-top: 30vh;
+  margin-top: 37vh;
   animation: appear 2s;
 }
 
@@ -45,14 +40,20 @@ body{
   animation: appear 4s;
 }
 
-.hello{
+.hello {
   font-family: monospace;
   font-size: calc(0.6rem + 0.5vw);
-  color: rgb(30, 165, 165, 0.721);
+  color: rgba(30, 165, 165, 0.721);
   animation: appear 1s;
   margin-left: -3vh;
   margin-top: 70vh;
-  rotate: -90deg;
+  transform: rotate(-90deg);
+}
+
+.rotate-0 {
+  transform: none;
+  margin-left: 45%;
+  margin-top: 75vh;
 }
 
 .logo {
@@ -99,16 +100,6 @@ li{
   0% {
     margin-left: -1.5rem;
   }
-}
-
-.aboutMe{
-  background: url('./assets/about-backg.webp'), rgba(37, 37, 37, 0.95);
-  background-repeat: no-repeat;
-  height: 100vh;
-  background-size: cover;
-  background-attachment: fixed;
-  overflow-x: hidden;
-  background-blend-mode: multiply;
 }
 
 .introduce{
