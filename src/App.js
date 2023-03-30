@@ -11,9 +11,12 @@ function App() {
   useEffect(() => {
     const handlePageChange = () => {
       const pageHeight = document.body.scrollHeight;
-      if (pageHeight > window.innerHeight * 1.2) {
+      const scrollPos = window.pageYOffset;
+      const windowHeight = window.innerHeight*0.9;
+
+      if (scrollPos >= windowHeight && pageHeight > window.innerHeight) {
         setPage('about');
-      } else if (pageHeight <= window.innerHeight * 1.2) {
+      } else {
         setPage('home');
       }
     };
@@ -26,11 +29,11 @@ function App() {
     <div className="App">
       <div className="row g-0 w-100 position-fixed" style={{background: '#15151550', zIndex: 91}}>
         <div className="col-4 p-0 mt-3" style={{zIndex: 91}}>
-        <p className="ms-4 ms-lg-5 mt-2 logo ps-2">Portfolio</p>
+          <p className="ms-4 ms-lg-5 mt-2 logo ps-2">Portfolio</p>
         </div>
         <div className="col p-0 d-flex justify-content-end mt-3" style={{zIndex: 91}}>
-        <Navbar activeLink={page}/>
-        <DropdownMenu/>
+          <Navbar activeLink={page}/>
+          <DropdownMenu activeLink={page}/>
         </div>
       </div>
       <Body/>

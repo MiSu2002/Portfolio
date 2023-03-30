@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from "react";
+import Skills from "./skills";
 
 const About = () => {
     const [helloRotate, setHelloRotate] = useState(false);
@@ -9,7 +10,7 @@ const About = () => {
             if (window.scrollY > window.innerHeight * 0.15) {
                 setShowAbout(true);
               }
-          if (window.scrollY > window.innerHeight * 1.5) {
+          if (window.scrollY > window.innerHeight * 1.8) {
             setHelloRotate(true);
           } else {
             setHelloRotate(false);
@@ -32,16 +33,16 @@ const About = () => {
       }, []);
 
     return(
-            <section id="about">
+            <section id="about" style={{overflowX: 'hidden'}}>
                 {showAbout && (
                 <div>
-                <div className="position-absolute text-white mt-5 ms-4 ms-lg-5">
+                <div className="position-absolute text-white ms-4 ms-lg-5" style={{overflowX: 'hidden'}}>
                 <style>
                     {`
                     .about-content{
                         font-family: Poppins;
                         width: 50%;
-                        margin-top: -20vh;
+                        margin-top: 3vh;
                     }
 
                     .about-content .para{
@@ -69,11 +70,11 @@ const About = () => {
                         background-color: rgb(0, 172, 172,0.1);
                     }
                     .hello1{
-                        margin-top: -70%;
+                        margin-top: -50%;
                     }
                     .rotate1{
                         margin-top: 7vh;
-                    }
+                    }                      
                     `}
                 </style>
                     <div className="mb-5 p-3 mx-auto about-content">
@@ -92,8 +93,10 @@ const About = () => {
                     <p className="mt-4 p-3 p-xl-4 para"> I have attended a Forage Engineering Programme hosted by Goldman Sachs and I have also worked as the Core Team Program Lead for the Google Developer Student Clubs on our campus.</p>
                     <div className="divider mt-lg-5 mb-lg-5" style={{animation: 'appear 14.7s'}}></div>
                     </div>
-                    <p className={`hello hello1 position-absolute ${helloRotate ? 'rotate-0 rotate1 w-100' : ''}`}>- About Me</p>
+                    <Skills/>
+                    <p className={`hello hello1 position-absolute ${helloRotate ? 'rotate-0 rotate1 w-100 position-sticky' : ''}`}>- About Me</p>
                 </div>
+                
                 </div>
                 )}
             </section>

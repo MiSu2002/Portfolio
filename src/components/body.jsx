@@ -18,6 +18,67 @@ const Body = () => {
 
   return (
     <section id='home' style={{overflowX: 'hidden'}}>
+      <style>
+        {`
+        .indicator {
+          position: relative;
+          width: 20px;
+          height: 20px;
+          top: 25%;
+          left: 50%;
+          transform: rotate(45deg);
+        }
+        .indicator span {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          box-sizing: border-box;
+          border: none;
+          border-bottom: 3px solid #fff;
+          border-right: 3px solid #fff;
+          animation: animate 2s linear infinite;
+        }
+        body .indicator span:nth-child(1) {
+          top: -20px;
+          left: -20px;
+          animation-delay: 0s;
+        }
+        body .indicator span:nth-child(2) {
+          top: -10px;
+          left: -10px;
+          animation-delay: 0.4s;
+        }
+        body .indicator span:nth-child(3) {
+          top: 0;
+          left: 0;
+          animation-delay: 0.8s;
+        }
+        body .indicator span:nth-child(4) {
+          top: 10px;
+          left: 10px;
+          animation-delay: 1.2s;
+        }
+        body .indicator span:nth-child(5) {
+          top: 20px;
+          left: 20px;
+          animation-delay: 0.8s;
+        }
+        @keyframes animate {
+          0% {
+            border-color: #fff;
+            transform: translate(0, 0);
+          }
+          20% {
+            border-color: #fff;
+            transform: translate(15px, 15px);
+          }
+          20.1%,
+          100% {
+            border-color: teal;
+          }
+        }
+        `}
+      </style>
       <div className="home position-relative">
       <div className="position-absolute h-100 w-100" style={{ zIndex: 9 }}>
         <p className={`hello position-absolute ${helloRotate ? 'rotate-0 w-100' : ''}`}>- Hello, World!</p>
@@ -30,6 +91,12 @@ const Body = () => {
             UNDERGRADUATE STUDENT
           </p>
         </div>
+        {!helloRotate && (
+          <div className="indicator" style={{animation: 'appear 5s'}}>
+            <span></span>
+            <span></span>
+          </div>
+      )}
       </div>
       <div className="position-absolute" style={{ top: 0, left: 0, zIndex: 8 }}>
         <ThreeScene />

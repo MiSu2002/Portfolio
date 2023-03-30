@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import { Sling as Hamburger } from 'hamburger-react'
 import { Link } from "react-router-dom";
 
-const DropdownMenu = () => {
+const DropdownMenu = (props) => {
     const [isOpen, setOpen] = useState(false);
 
     const handleAboutClick = () => {
@@ -42,8 +42,8 @@ const DropdownMenu = () => {
                 {isOpen ? (
           <div className="d-flex justify-content-end mt-4 position-absolute" style={{right: '3%'}}>
           <ul className="me-3 me-lg-4 list-unstyled text-end mt-5" style={{ letterSpacing: '4px', fontFamily: 'Poppins' }}>
-            <Link to='/' className="text-decoration-none"><li className='active fade-in' style={{ animationDelay: '0.2s' }}>HOME</li></Link>
-            <li onClick={handleAboutClick} className='mt-3 mt-lg-5 fade-in' style={{ animationDelay: '0.4s', cursor: 'pointer' }}>ABOUT</li>
+            <Link to='/' className="text-decoration-none text-white"><li className={`nav-link fade-in ${props.activeLink === 'home' ? 'active' : ''}`} style={{ animationDelay: '0.2s' }}>HOME</li></Link>
+            <li onClick={handleAboutClick} className={`nav-link mt-3 mt-lg-5 fade-in ${props.activeLink === 'about' ? 'active' : ''}`} style={{ animationDelay: '0.4s', cursor: 'pointer' }}>ABOUT</li>
             <li className="mt-3 mt-lg-5 fade-in" style={{ animationDelay: '0.6s' }}>EDUCATION</li>
             <li className="mt-3 mt-lg-5 fade-in" style={{ animationDelay: '0.8s' }}>PROJECTS</li>
             <li className="mt-3 mt-lg-5 fade-in" style={{ animationDelay: '1s' }}>CAREER</li>
