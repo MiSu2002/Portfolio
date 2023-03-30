@@ -15,31 +15,6 @@ body{
   height: 120vh;
 }
 
-.name{
-  font-size: calc(2rem + 2vw);
-  color: #fff;
-  margin-top: 37vh;
-  animation: appear 2s;
-}
-
-.line{
-  height: 0.2vh;
-  margin-top: -1.5vh;
-  background-color: teal;
-  width: calc(20rem + 15vw);
-  margin-left: auto;
-  margin-right: auto;
-  animation: appear 3s;
-}
-
-.overview{
-  color: #fff;
-  font-size: calc(0.6rem + 0.5vw);
-  letter-spacing: 3px;
-  word-spacing: 2px;
-  animation: appear 4s;
-}
-
 .hello {
   font-family: monospace;
   font-size: calc(0.6rem + 0.5vw);
@@ -52,7 +27,7 @@ body{
 
 .rotate-0 {
   transform: none;
-  margin-left: 45%;
+  margin-left: 47%;
   margin-top: 75vh;
 }
 
@@ -99,50 +74,6 @@ li{
 @keyframes slide-left {
   0% {
     margin-left: -1.5rem;
-  }
-}
-
-.introduce{
-  /* font-family: monospace; */
-  font-size: calc(0.7rem + 0.5vw);
-  font-family: monospace;
-  color: rgb(233, 233, 233);
-}
-
-.var{
-  text-decoration: none;
-  color: rgb(0, 166, 255);
-  font-family: Dancing Script;
-}
-
-.equals{
-  text-decoration: none;
-  color: rgb(255, 255, 255);
-}
-
-.br1,.br2{
-  text-decoration: none;
-  color: rgb(255, 240, 164);
-}
-
-.dp{
-  box-shadow: 0.5rem 0.5rem 0.2rem 0.05rem rgba(109, 109, 109, 0.554);
-  height: 70vh;
-  animation: visible 3s;
-}
-
-.myself{
-  font-size: calc(0.5rem + 0.7vw);
-  font-family: monospace;
-  text-align: justify;
-  width: 90%;
-  line-height: 4vmin;
-  color: rgb(252, 255, 195);
-}
-
-@keyframes visible {
-  0%,50%{
-    visibility: hidden;
   }
 }
 

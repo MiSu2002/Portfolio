@@ -20,6 +20,30 @@ const Body = () => {
     <section id='home' style={{overflowX: 'hidden'}}>
       <style>
         {`
+        .name{
+          font-size: calc(2rem + 2vw);
+          color: #fff;
+          margin-top: 37vh;
+          animation: appear 2s;
+        }
+        
+        .line{
+          height: 0.2vh;
+          margin-top: -1.5vh;
+          background-color: teal;
+          width: calc(20rem + 15vw);
+          margin-left: auto;
+          margin-right: auto;
+          animation: appear 3s;
+        }
+        
+        .overview{
+          color: #fff;
+          font-size: calc(0.6rem + 0.5vw);
+          letter-spacing: 3px;
+          word-spacing: 2px;
+          animation: appear 4s;
+        }
         .indicator {
           position: relative;
           width: 20px;

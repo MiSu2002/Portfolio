@@ -70,11 +70,11 @@ const About = () => {
                         background-color: rgb(0, 172, 172,0.1);
                     }
                     .hello1{
-                        margin-top: -50%;
+                        top: 0;
                     }
                     .rotate1{
                         margin-top: 7vh;
-                    }                      
+                    }                    
                     `}
                 </style>
                     <div className="mb-5 p-3 mx-auto about-content">
