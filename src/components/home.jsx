@@ -1,7 +1,7 @@
 import React, { useState, useEffect }  from "react";
 import ThreeScene from "./three";
 
-const Body = () => {
+const Home = () => {
   const [helloRotate, setHelloRotate] = useState(false);
 
   useEffect(() => {
@@ -130,4 +130,4 @@ const Body = () => {
   );
 };
 
-export default Body;
+export default Home;

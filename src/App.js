@@ -1,9 +1,9 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
-import Body from './components/body';
 import About from './components/about';
 import Navbar from './components/Navbar';
 import DropdownMenu from './components/Dropdown-menu';
+import Home from './components/home';
 
 function App() {
   const [page, setPage] = useState('home');
@@ -36,7 +36,7 @@ function App() {
           <DropdownMenu activeLink={page}/>
         </div>
       </div>
-      <Body/>
+      <Home/>
       <About/>
     </div>
   );

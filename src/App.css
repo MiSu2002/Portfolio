@@ -93,67 +93,6 @@ li{
   width: 87%;
 }
 
-.skill1, .skill2, .skill3, .skill4, .skill5, .skill6, .skill7, .skill8, .skill9{
-  width: 90%;
-  height: 4vmin;
-  border-radius: 5rem;
-  position: relative;
-  background-color: rgba(255, 255, 255, 0.2);
-  font-size: calc(0.1rem + 1vw);
-  line-height: 2vmin;
-}
-
-.skill1 p, .skill2 p, .skill3 p, .skill4 p, .skill5 p, .skill6 p, .skill7 p, .skill8 p, .skill9 p{
-  border-radius: 5rem 0 0 5rem;
-  color: rgb(0, 21, 255);
-  height: 100%;
-}
-
-.skill1 p{
-  background: linear-gradient(to right, rgb(255, 248, 176), rgb(161, 255, 255));
-  width: 85%;
-}
-
-.skill2 p{
-  background: linear-gradient(to right, rgb(255, 248, 176), rgb(216, 161, 255));
-  width: 80%;
-}
-
-.skill3 p{
-  background: linear-gradient(to right, rgb(255, 248, 176), rgb(161, 255, 161));
-  width: 90%;
-}
-
-.skill4 p{
-  background: linear-gradient(to right, rgb(255, 248, 176), rgb(255, 211, 161));
-  width: 92%;
-}
-
-.skill5 p{
-  background: linear-gradient(to right, rgb(255, 248, 176), rgb(255, 161, 161));
-  width: 85%;
-}
-
-.skill6 p{
-  background: linear-gradient(to right, rgb(255, 248, 176), rgb(255, 161, 252));
-  width: 75%;
-}
-
-.skill7 p{
-  background: linear-gradient(to right, rgb(255, 248, 176), rgb(255, 161, 217));
-  width: 85%;
-}
-
-.skill8 p{
-  background: linear-gradient(to right, rgb(255, 248, 176), rgb(161, 255, 231));
-  width: 87%;
-}
-
-.skill9 p{
-  background: linear-gradient(to right, rgb(255, 248, 176), rgb(161, 161, 255));
-  width: 78%;
-}
-
 .interests{
   width: 80%;
   text-align: justify;
