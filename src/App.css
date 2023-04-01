@@ -81,32 +81,7 @@ li{
   font-size: calc(1rem + 1.2vw);
 }
 
-.tech-skills{
-  font-size: calc(0.7rem + 0.8vw);
-}
-
-.skill-text{
-  top: 50%;
-  position: absolute;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  width: 87%;
-}
-
-.interests{
-  width: 80%;
-  text-align: justify;
-  font-size: calc(0.3rem + 1vw);
-  color: rgb(0, 166, 255);
-  line-height: 3vmin;
-}
-
-.lang{
-  font-size: calc(0.3rem + 1vw);
-  line-height: 3vmin;
-}
-
-.ed{
+/* .ed{
   background: url(./assets/education-backg.jpg), rgb(0, 0, 0, 0.8);
   background-repeat: no-repeat;
   height: 100vh;
@@ -114,9 +89,9 @@ li{
   background-attachment: fixed;
   overflow-x: hidden;
   background-blend-mode: multiply;
-}
+} */
 
-.achievements h4{
+/* .achievements h4{
   color: rgb(255, 223, 164);
   line-height: 4vmin;
 }
@@ -149,4 +124,4 @@ li{
 .bot-btn{
   width: 4vw;
   cursor: pointer;
-}
+} */

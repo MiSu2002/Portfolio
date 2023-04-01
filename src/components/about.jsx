@@ -56,7 +56,7 @@ const About = () => {
             <section id="about" style={{overflowX: 'hidden'}}>
                 {showAbout && (
                 <div>
-                <div className="position-absolute text-white ms-4 ms-lg-5" style={{overflowX: 'hidden'}}>
+                <div className="text-white ms-4 ms-lg-5" style={{overflowX: 'hidden'}}>
                 <style>
                     {`
                     .about-content{
@@ -89,10 +89,12 @@ const About = () => {
                         background-color: rgb(0, 172, 172,0.1);
                     }
                     .hello1{
-                        top: 0;
+                        top: 110vh;
+                        margin-left: -5vh;
                     }
                     .rotate1{
-                        margin-top: 15vh;
+                        margin-top: 10vh;
+                        margin-left: 47%;
                     }                    
                     `}
                 </style>
@@ -116,9 +118,9 @@ const About = () => {
                     <Skills data={progressesData2} skillTitle={"Other"}/>
                     <p className={`hello hello1 position-absolute ${helloRotate ? 'rotate-0 rotate1 w-100 position-sticky' : ''}`}>- About Me</p>
                 </div>
-                
                 </div>
                 )}
+                {/* <Education/> */}
             </section>
     )
 }

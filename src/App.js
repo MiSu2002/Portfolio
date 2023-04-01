@@ -4,6 +4,7 @@ import About from './components/about';
 import Navbar from './components/Navbar';
 import DropdownMenu from './components/Dropdown-menu';
 import Home from './components/home';
+import Education from './components/education';
 
 function App() {
   const [page, setPage] = useState('home');
@@ -12,12 +13,16 @@ function App() {
     const handlePageChange = () => {
       const pageHeight = document.body.scrollHeight;
       const scrollPos = window.pageYOffset;
-      const windowHeight = window.innerHeight*0.9;
+      const windowHeight = window.innerHeight;
 
       if (scrollPos >= windowHeight && pageHeight > window.innerHeight) {
-        setPage('about');
+        if (scrollPos + windowHeight >= pageHeight) {
+          setPage('education'); // user has scrolled to the bottom of the page
+        } else {
+          setPage('about'); // user has scrolled to the "About" section
+        }
       } else {
-        setPage('home');
+        setPage('home'); // user is at the top of the page
       }
     };
 
@@ -38,6 +43,7 @@ function App() {
       </div>
       <Home/>
       <About/>
+      <Education/>
     </div>
   );
 }

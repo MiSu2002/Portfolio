@@ -1,5 +1,5 @@
 import React, { useState, useEffect }  from "react";
-import ThreeScene from "./three";
+import ThreeScene from "./cube";
 
 const Home = () => {
   const [helloRotate, setHelloRotate] = useState(false);
