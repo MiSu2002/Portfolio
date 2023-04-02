@@ -101,11 +101,11 @@ const Education = () => {
                         <p style={{color: 'rgb(0,180,180)'}}>:</p>
                         <p className="ms-4">Computer Science and Engineering (CSE)</p>
                         </div>
-                        <div className="mt-5 p-3 p-xl-4 para d-flex">
+                        </div>
+                        <div className="mt-4 p-3 p-xl-4 para d-flex">
                         <p className="me-2" style={{color: 'rgb(0,180,180)'}}>Graduation Year</p>
                         <p style={{color: 'rgb(0,180,180)'}}>:</p>
                         <p className="ms-4">2024</p>
-                        </div>
                         </div>
                     <div className="divider mt-lg-5 mb-lg-5"></div>
                     </div>

@@ -5,6 +5,34 @@ import Navbar from './components/Navbar';
 import DropdownMenu from './components/Dropdown-menu';
 import Home from './components/home';
 import Education from './components/education';
+import Projects from './components/projects';
+import projImg1 from './assets/project-images/project1.png';
+import projImg2 from './assets/project-images/project2.png';
+
+const projects = [
+  {
+    id: 1,
+    name: 'Cinèra',
+    image: projImg1,
+    description: 'Movies and Shows Database and Recommendation Website',
+    link: 'http://ashy-sea-04e9b9f10.2.azurestaticapps.net'
+  },
+  {
+    id: 2,
+    name: 'Portfolio Website',
+    image: projImg2,
+    description: 'My Portfolio Website',
+    link: 'https://example.com/project2'
+  },
+  {
+    id: 3,
+    name: 'Project 3',
+    image: 'path/to/image3.jpg',
+    description: 'Etiam eget nibh turpis.',
+    link: 'https://example.com/project3'
+  },
+  // add more projects as needed
+];
 
 function App() {
   const [page, setPage] = useState('home');
@@ -44,6 +72,7 @@ function App() {
       <Home/>
       <About/>
       <Education/>
+      <Projects projects={projects} />
     </div>
   );
 }
