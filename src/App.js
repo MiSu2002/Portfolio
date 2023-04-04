@@ -8,6 +8,7 @@ import Education from './components/education';
 import Projects from './components/projects';
 import projImg1 from './assets/project-images/project1.png';
 import projImg2 from './assets/project-images/project2.png';
+import projImg3 from './assets/project-images/project3.png';
 
 const projects = [
   {
@@ -22,14 +23,14 @@ const projects = [
     name: 'Portfolio Website',
     image: projImg2,
     description: 'My Portfolio Website',
-    link: 'https://example.com/project2'
+    link: 'http://proud-water-0c81c2b10.2.azurestaticapps.net'
   },
   {
     id: 3,
-    name: 'Project 3',
-    image: 'path/to/image3.jpg',
-    description: 'Etiam eget nibh turpis.',
-    link: 'https://example.com/project3'
+    name: 'Gaussian Distribution Package',
+    image: projImg3,
+    description: 'Python package for Gaussian distribution calculations',
+    link: 'https://github.com/MiSu2002/gaussian_python_package'
   },
   // add more projects as needed
 ];
@@ -44,7 +45,10 @@ function App() {
       const windowHeight = window.innerHeight;
 
       if (scrollPos >= windowHeight && pageHeight > window.innerHeight) {
+        const projectsSectionHeight = document.getElementById('projects').offsetHeight;
         if (scrollPos + windowHeight >= pageHeight) {
+          setPage('projects'); // user has scrolled to the "Projects" section
+        } else if (scrollPos + windowHeight >= pageHeight - projectsSectionHeight*2) {
           setPage('education'); // user has scrolled to the bottom of the page
         } else {
           setPage('about'); // user has scrolled to the "About" section
@@ -52,7 +56,8 @@ function App() {
       } else {
         setPage('home'); // user is at the top of the page
       }
-    };
+      
+    }
 
     window.addEventListener('scroll', handlePageChange);
     return () => window.removeEventListener('scroll', handlePageChange);

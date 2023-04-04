@@ -48,8 +48,8 @@ const DropdownMenu = (props) => {
           <ul className="me-3 me-lg-4 list-unstyled text-end mt-5" style={{ letterSpacing: '4px', fontFamily: 'Poppins' }}>
             <Link to='/' className="text-decoration-none text-white"><li className={`nav-link fade-in ${props.activeLink === 'home' ? 'active' : ''}`} style={{ animationDelay: '0.2s' }}>HOME</li></Link>
             <li onClick={handleAboutClick} className={`nav-link mt-3 mt-lg-5 fade-in ${props.activeLink === 'about' ? 'active' : ''}`} style={{ animationDelay: '0.4s', cursor: 'pointer' }}>ABOUT</li>
-            <li className={`nav-link mt-3 mt-lg-5 fade-in ${props.activeLink === 'education' ? 'active' : ''}`} style={{ animationDelay: '0.4s', cursor: 'pointer' }}>EDUCATION</li>
-            <li className="mt-3 mt-lg-5 fade-in" style={{ animationDelay: '0.8s' }}>PROJECTS</li>
+            <li className={`nav-link mt-3 mt-lg-5 fade-in ${props.activeLink === 'education' ? 'active' : ''}`} style={{ animationDelay: '0.6s', cursor: 'pointer' }}>EDUCATION</li>
+            <li className={`mt-3 mt-lg-5 fade-in ${props.activeLink === 'projects' ? 'active' : ''}`} style={{ animationDelay: '0.8s', cursor: 'pointer' }}>PROJECTS</li>
             <li className="mt-3 mt-lg-5 fade-in" style={{ animationDelay: '1s' }}>CAREER</li>
             <li className="mt-3 mt-lg-5 fade-in" style={{ animationDelay: '1.2s' }}>CONTACT</li>
           </ul>

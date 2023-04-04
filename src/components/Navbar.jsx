@@ -20,7 +20,7 @@ const Navbar = (props) => {
                 </li>
 
                 <li className="nav-item me-5">
-        <p className="nav-link">Projects</p> 
+                <a href="#projects" className={`nav-link ${props.activeLink === 'projects' ? 'active' : ''}`}>Projects</a>
       </li>
                 <li className="nav-item me-5">
         <p className="nav-link">Career</p> 

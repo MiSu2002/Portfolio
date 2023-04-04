@@ -32,7 +32,7 @@ const Education = () => {
       }, []);
 
     return(
-            <section id="education" className="text-white" style={{overflowX: 'hidden', marginBottom: '35vh'}}>
+            <section id="education" className="text-white" style={{overflowX: 'hidden', marginBottom: '30vh'}}>
                 {showEducation && (
                     <div>
                         <style>
