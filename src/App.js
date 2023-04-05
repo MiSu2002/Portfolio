@@ -9,6 +9,8 @@ import Projects from './components/projects';
 import projImg1 from './assets/project-images/project1.png';
 import projImg2 from './assets/project-images/project2.png';
 import projImg3 from './assets/project-images/project3.png';
+import projImg4 from './assets/project-images/project4.png';
+import Career from './components/career';
 
 const projects = [
   {
@@ -27,12 +29,108 @@ const projects = [
   },
   {
     id: 3,
-    name: 'Gaussian Distribution Package',
+    name: 'Grocery Android App',
     image: projImg3,
+    description: 'Grocery List Android App using Kotlin',
+    link: 'https://github.com/smartinternz02/SPSGP-82116-Virtual-Internship---Android-Application-Development-Using-Kotlin'
+  },
+  {
+    id: 4,
+    name: 'Gaussian Distribution Package',
+    image: projImg4,
     description: 'Python package for Gaussian distribution calculations',
     link: 'https://github.com/MiSu2002/gaussian_python_package'
   },
-  // add more projects as needed
+];
+
+const careers = [
+  {
+    id: 1,
+    job_title: 'Azure Developer Intern',
+    company: 'Microsoft-EY-Future Ready Talent',
+    description: [
+      'Understood Cloud Computing fundamentals Learned working with Azure services such as Static Web Apps and QnA Chatbot',
+      'Gained valuable knowledge on working with Azure services in different fields by Industrial Experts',
+      'Created a portfolio website using ReactJS and Static Web Apps as project',
+      'Link to my project website: https://proud- water-0c81c2b10.2.azurestaticapps.net',
+      'Link to my project (Github): https://github.com/MiSu2002/Portfolio',
+    ],
+    from: 'June 2022',
+    to: 'Present',
+  },
+  {
+    id: 2,
+    job_title: 'Anroid App Developer Intern',
+    company: 'AICTE-Google-SmartInternz',
+    description: [
+      'Understood App development in Android',
+      'Used Kotlin to make dice roller app',
+      'Used git control',
+      'Simulated the app in android device',
+      'Completion of project within deadline',
+      'Dice Roller Android App (Github): https://github.com/MiSu2002/Dice-Roller',
+      'Final Project - Grocery List App (Github): https://github.com/smartinternz02/SPSGP- 82116-Virtual-Internship---Android- Application-Development-Using-Kotlin',
+    ],
+    from: 'August 2022',
+    to: 'September 2022',
+  },
+  {
+    id: 3,
+    job_title: 'Front-End Developer Intern (On-Site)',
+    company: 'Graphe, Kolkata',
+    description: [
+      'Understood Figma UI/UX Design to develop the front-end layouts',
+      'Used languages such as HTML, CSS, JS and JQuery',
+      'Used git control',
+      'Built responsive websites using Bootstrap 5 Responsible of finishing and submitting the projects within deadline',
+      'Links to projects:',
+      '1. Graphe-Weddings frontend website (Github): https://github.com/MiSu2002/Graphe- Weddings',
+      '2. FoodSpin frontend website (Github): https://github.com/MiSu2002/FoodSpinr',
+    ],
+    from: 'June 2022',
+    to: 'June 2022',
+  },
+  {
+    id: 4,
+    job_title: 'Mechine Learning Student',
+    company: 'Udacity-Amazon',
+    description: [
+      'Completed modules within deadline',
+      'Understood ML models',
+      'Implemented statistics and linear algebra in ML model',
+      'Used git control',
+      'Used pandas, numpy, scikit-learn, matplotlib and jupyter to create models',
+      'Used Reinforcement Learning model to train a racing car and composed music using Generative Adversarial Networks (GANs) in Amazon SageMaker',
+      'Created a python package that is imported in python file to calculate gaussian distribution and binomial distrubution',
+    ],
+    from: 'August 2022',
+    to: 'September 2022',
+  },
+  {
+    id: 5,
+    job_title: 'Virtual Programme Student',
+    company: 'Goldman Sachs Company',
+    description: [
+      'Completed modules within deadline',
+      'Cracked passwords and tested outputs on Kali Linux',
+    ],
+    from: 'June 2022',
+    to: 'July 2022',
+  },
+  {
+    id: 6,
+    job_title: 'Google Developer Students Clubs (GDSC)',
+    company: 'Goldman Sachs Company',
+    description: [
+      'Worked as a Core Team Member and Program Management Lead',
+      'Managed the team to work effectively and finish projects within deadline',
+      'Assisted the Team Lead in organization of events',
+      'Practiced Hands On Labs with Cloud Essentials, BigData, DBMS, BigQuery, Kubernetes, ML and AI, Dart Essentials and Flutter Development',
+      'Participated in Google Cloud Program and Google Cloud Ready Facilitator Program',
+    ],
+    from: 'September 2021',
+    to: 'July 2022',
+  },
 ];
 
 function App() {
@@ -78,6 +176,7 @@ function App() {
       <About/>
       <Education/>
       <Projects projects={projects} />
+      <Career careers={careers}/>
     </div>
   );
 }

@@ -117,7 +117,7 @@ const Projects = ({ projects }) => {
               </div>
             </div>
           ))}
-          <button className="btn next position-absolute text-black d-none d-md-block">{`>`}</button>
+          <button className="btn next position-absolute text-black d-none d-md-block" >{`>`}</button>
         </div>
       </div>
     );
