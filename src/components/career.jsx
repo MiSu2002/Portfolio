@@ -3,6 +3,19 @@ import React, {useState, useEffect} from "react";
 const Career = ({careers}) => {
     const [helloRotate, setHelloRotate] = useState(false);
     const [showCareer, setShowCareer] = useState(false);
+    const [displayedCareers, setDisplayedCareers] = useState(1);
+
+    const handleLoadMore = () => {
+        setDisplayedCareers(displayedCareers + 1);
+      };
+      
+      const handleViewLess = () => {
+        setDisplayedCareers(1);
+      };
+      
+      const isViewMoreButtonVisible = displayedCareers < careers.length;
+      const isViewLessButtonVisible = displayedCareers > 1;
+      
 
       useEffect(() => {
         const handleScroll = () => {
@@ -32,7 +45,7 @@ const Career = ({careers}) => {
       }, []);
 
     return(
-        <section id="career" className="text-white mx-auto" style={{overflowX: 'hidden', marginBottom: '30vh'}}>
+        <section id="careers" className="text-white mx-auto" style={{overflowX: 'hidden', marginBottom: '30vh'}}>
                 {showCareer && (
                     <div>
                         <style>
@@ -68,7 +81,7 @@ const Career = ({careers}) => {
                         background-color: rgb(0, 172, 172,0.1);
                     }
                     .hello2{
-                        margin-top: -300vh;
+                        margin-top: -50vh;
                         margin-left: 0;
                     }
                     .rotate1{
@@ -77,10 +90,9 @@ const Career = ({careers}) => {
                     }                    
                     `}
                 </style>
-                
                     <div className="mb-5 p-3 mx-auto career-content">
                     <p className="mb-5 hi"> - Professional Experience</p>
-                    {careers.map(career => (
+                    {careers.slice(0, displayedCareers).map(career => (
                         <div>
                             <div className="divider"  style={{marginTop: '10vh', marginBottom: '10vh'}}></div>
                             <div key={career.id}>
@@ -107,14 +119,47 @@ const Career = ({careers}) => {
                         </div>
                         </div>
                         <div className="mt-4 p-3 p-xl-4 para d-flex">
-                        <p className="me-2" style={{color: 'rgb(0,180,180)'}}>Job Description</p>
-                        <p style={{color: 'rgb(0,180,180)'}}>:</p>
-                        <p className="ms-4">{career.description}</p>
-                        </div>
+  <p className="me-2" style={{color: 'rgb(0,180,180)'}}>Job Description</p>
+  <p style={{color: 'rgb(0,180,180)'}}>:</p>
+  <div className="ms-4" style={{lineHeight: '2'}}>
+  {career.description.map((item) => (
+              <div className="mb-5">
+                <p className="text-success" style={{ display: 'inline-block', marginRight: '15px' }}>{`-> `}</p>
+                {item.includes('https') ? (
+                  <span>
+                    {item.split('https')[0]}
+                    <a href={`https${item.split('https')[1]}`} target="_blank" rel="noopener noreferrer" style={{ color: 'teal' }}>
+                      https{item.split('https')[1]}
+                    </a>
+                  </span>
+                ) : (
+                  <span>{item}</span>
+                )}
+              </div>
+            ))}
+  </div>
+</div>
                         </div>
                         </div>
                     ))}
                     <div className="divider mt-lg-5 mb-lg-5"></div>
+                    <div className="d-flex justify-content-center">
+                    {isViewMoreButtonVisible && (
+          <div className="text-center mt-5">
+            <button className="btn text-white" onClick={handleLoadMore} style={{backgroundColor: 'teal'}}>
+              View More
+            </button>
+          </div>
+        )}
+
+        {isViewLessButtonVisible && (
+          <div className="text-center mt-5 ms-4">
+            <button className="btn text-white" onClick={handleViewLess} style={{backgroundColor: 'teal'}}>
+              View Less
+            </button>
+          </div>
+        )}
+                    </div>
                     </div>
                     <p className={`hello hello2 position-absolute ${helloRotate ? 'rotate-0 rotate1 w-100 position-sticky' : ''}`}>- Career</p>
                     </div>

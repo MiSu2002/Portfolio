@@ -52,7 +52,7 @@ const careers = [
       'Understood Cloud Computing fundamentals Learned working with Azure services such as Static Web Apps and QnA Chatbot',
       'Gained valuable knowledge on working with Azure services in different fields by Industrial Experts',
       'Created a portfolio website using ReactJS and Static Web Apps as project',
-      'Link to my project website: https://proud- water-0c81c2b10.2.azurestaticapps.net',
+      'Link to my project website: https://proud-water-0c81c2b10.2.azurestaticapps.net',
       'Link to my project (Github): https://github.com/MiSu2002/Portfolio',
     ],
     from: 'June 2022',
@@ -69,7 +69,7 @@ const careers = [
       'Simulated the app in android device',
       'Completion of project within deadline',
       'Dice Roller Android App (Github): https://github.com/MiSu2002/Dice-Roller',
-      'Final Project - Grocery List App (Github): https://github.com/smartinternz02/SPSGP- 82116-Virtual-Internship---Android- Application-Development-Using-Kotlin',
+      'Final Project - Grocery List App (Github): https://github.com/smartinternz02/SPSGP-82116-Virtual-Internship---Android-Application-Development-Using-Kotlin',
     ],
     from: 'August 2022',
     to: 'September 2022',
@@ -83,9 +83,8 @@ const careers = [
       'Used languages such as HTML, CSS, JS and JQuery',
       'Used git control',
       'Built responsive websites using Bootstrap 5 Responsible of finishing and submitting the projects within deadline',
-      'Links to projects:',
-      '1. Graphe-Weddings frontend website (Github): https://github.com/MiSu2002/Graphe- Weddings',
-      '2. FoodSpin frontend website (Github): https://github.com/MiSu2002/FoodSpinr',
+      '1. Graphe-Weddings frontend website (Github): https://github.com/MiSu2002/Graphe-Weddings',
+      '2. FoodSpin frontend website (Github): https://github.com/MiSu2002/FoodSpin',
     ],
     from: 'June 2022',
     to: 'June 2022',
@@ -143,17 +142,24 @@ function App() {
       const windowHeight = window.innerHeight;
 
       if (scrollPos >= windowHeight && pageHeight > window.innerHeight) {
+        const careersSectionHeight = document.getElementById('careers').offsetHeight;
         const projectsSectionHeight = document.getElementById('projects').offsetHeight;
-        if (scrollPos + windowHeight >= pageHeight) {
+        const educationSectionHeight = document.getElementById('education').offsetHeight;
+        const pos = scrollPos + windowHeight;
+        const bottom = pageHeight - careersSectionHeight + educationSectionHeight*0.7;
+
+        if (pos >= bottom) {
+          setPage('careers'); // user has scrolled to the "Careers" section
+        } else if (pos >= bottom - projectsSectionHeight) {
           setPage('projects'); // user has scrolled to the "Projects" section
-        } else if (scrollPos + windowHeight >= pageHeight - projectsSectionHeight*2) {
-          setPage('education'); // user has scrolled to the bottom of the page
+        } else if (pos >= bottom - projectsSectionHeight - educationSectionHeight) {
+          setPage('education'); // user has scrolled to the "Education" section
         } else {
           setPage('about'); // user has scrolled to the "About" section
         }
       } else {
         setPage('home'); // user is at the top of the page
-      }
+      }      
       
     }
 

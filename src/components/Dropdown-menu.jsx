@@ -50,7 +50,7 @@ const DropdownMenu = (props) => {
             <li onClick={handleAboutClick} className={`nav-link mt-3 mt-lg-5 fade-in ${props.activeLink === 'about' ? 'active' : ''}`} style={{ animationDelay: '0.4s', cursor: 'pointer' }}>ABOUT</li>
             <li className={`nav-link mt-3 mt-lg-5 fade-in ${props.activeLink === 'education' ? 'active' : ''}`} style={{ animationDelay: '0.6s', cursor: 'pointer' }}>EDUCATION</li>
             <li className={`mt-3 mt-lg-5 fade-in ${props.activeLink === 'projects' ? 'active' : ''}`} style={{ animationDelay: '0.8s', cursor: 'pointer' }}>PROJECTS</li>
-            <li className="mt-3 mt-lg-5 fade-in" style={{ animationDelay: '1s' }}>CAREER</li>
+            <li className={`mt-3 mt-lg-5 fade-in ${props.activeLink === 'careers' ? 'active' : ''}`} style={{ animationDelay: '1s', cursor: 'pointer' }}>CAREER</li>
             <li className="mt-3 mt-lg-5 fade-in" style={{ animationDelay: '1.2s' }}>CONTACT</li>
           </ul>
         </div>        
