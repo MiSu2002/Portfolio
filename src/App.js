@@ -11,6 +11,7 @@ import projImg2 from './assets/project-images/project2.png';
 import projImg3 from './assets/project-images/project3.png';
 import projImg4 from './assets/project-images/project4.png';
 import Career from './components/career';
+import Contact from './components/contact';
 
 const projects = [
   {
@@ -183,6 +184,7 @@ function App() {
       <Education/>
       <Projects projects={projects} />
       <Career careers={careers}/>
+      <Contact/>
     </div>
   );
 }

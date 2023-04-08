@@ -112,15 +112,14 @@ const Career = ({careers}) => {
                         <p style={{color: 'rgb(0,180,180)'}}>:</p>
                         <p className="ms-4">{career.from}</p>
                         </div>
-                        <div className="col d-flex justify-content-end">
+                        <div className="col d-flex justify-content-lg-end">
                         <p className="me-2" style={{color: 'rgb(0,180,180)'}}>To</p>
                         <p style={{color: 'rgb(0,180,180)'}}>:</p>
                         <p className="ms-4">{career.to}</p>
                         </div>
                         </div>
-                        <div className="mt-4 p-3 p-xl-4 para d-flex">
-  <p className="me-2" style={{color: 'rgb(0,180,180)'}}>Job Description</p>
-  <p style={{color: 'rgb(0,180,180)'}}>:</p>
+                        <div className="para">
+                        <p className="me-2 mt-4 p-3 p-xl-4 " style={{color: 'rgb(0,180,180)'}}>Job Description :</p>
   <div className="ms-4" style={{lineHeight: '2'}}>
   {career.description.map((item) => (
               <div className="mb-5">
