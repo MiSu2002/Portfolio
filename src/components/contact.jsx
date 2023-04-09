@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import bgImage from "../assets/contact@3x.jpg";
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
-
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 
@@ -17,6 +16,8 @@ const redIcon = new L.Icon({
 
 const Contact = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const apiKey = process.env.REACT_APP_API_KEY;
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -143,7 +144,7 @@ const Contact = () => {
   scrollWheelZoom={false}>
   <TileLayer
     attribution='&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="https://openstreetmap.org">OpenStreetMap</a> contributors'
-    url="https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png"
+    url={`https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png?api_key=${apiKey}`}
   />
   <Marker position={[22.5726, 88.3639]} icon={redIcon}>
     <Popup>

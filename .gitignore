@@ -24,3 +24,6 @@ yarn-error.log*
 
 #keys
 .keys.env
+
+#.env file
+/src/constants/.env
