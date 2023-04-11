@@ -143,23 +143,26 @@ function App() {
       const windowHeight = window.innerHeight;
 
       if (scrollPos >= windowHeight && pageHeight > window.innerHeight) {
+        const contactSectionHeight = document.getElementById('contact').offsetHeight;
         const careersSectionHeight = document.getElementById('careers').offsetHeight;
         const projectsSectionHeight = document.getElementById('projects').offsetHeight;
         const educationSectionHeight = document.getElementById('education').offsetHeight;
         const pos = scrollPos + windowHeight;
-        const bottom = pageHeight - careersSectionHeight + educationSectionHeight*0.7;
+        const bottom = pageHeight - contactSectionHeight + careersSectionHeight*0.05;
 
         if (pos >= bottom) {
-          setPage('careers'); // user has scrolled to the "Careers" section
-        } else if (pos >= bottom - projectsSectionHeight) {
-          setPage('projects'); // user has scrolled to the "Projects" section
-        } else if (pos >= bottom - projectsSectionHeight - educationSectionHeight) {
-          setPage('education'); // user has scrolled to the "Education" section
+          setPage('contact');
+        } else if (pos >= bottom - careersSectionHeight) {
+          setPage('careers');
+        } else if (pos >= bottom - careersSectionHeight - projectsSectionHeight) {
+          setPage('projects');
+        } else if (pos >= bottom - careersSectionHeight - projectsSectionHeight - educationSectionHeight) {
+          setPage('education'); 
         } else {
-          setPage('about'); // user has scrolled to the "About" section
+          setPage('about');
         }
       } else {
-        setPage('home'); // user is at the top of the page
+        setPage('home');
       }      
       
     }

@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import bgImage from "../assets/contact@3x.jpg";
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css';
@@ -27,6 +27,7 @@ const Contact = () => {
 
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [showBgImage, setShowBgImage] = useState(false);
+  const [showContact, setShowContact] = useState(false);
   
   const apiKey = process.env.REACT_APP_API_KEY;
 
@@ -41,6 +42,27 @@ const Contact = () => {
       console.log(error.text);
   });
 };
+
+useEffect(() => {
+  const handleScroll = () => {
+    if (window.scrollY > window.innerHeight * 0.25) {
+        setShowContact(true);
+      }
+  const paragraphs = document.querySelectorAll('div');
+        paragraphs.forEach((p) => {
+            const position = p.getBoundingClientRect();
+            if (position.top < window.innerHeight * 0.9) {
+                p.style.opacity = 1;
+                p.style.transition = 'opacity 1s';
+            } else {
+                p.style.opacity = 0;
+                p.style.transition = 'opacity 1s';
+            }
+        });
+      };
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+      }, []);
 
   const handleReset = () => {
     setIsSubmitted(false);
@@ -73,7 +95,7 @@ const Contact = () => {
       resume.style.opacity = 0;
       window.scrollTo(0, document.body.scrollHeight - window.innerHeight);
     }
-  }
+  };
 
   return (
     <div className="mt-5 text-white" id="contact" >
@@ -90,7 +112,6 @@ const Contact = () => {
             margin-top: -5vh;
             margin-bottom: 8vh;
             color: rgb(0,180,180);
-            font-family: Ahganirya;
             letter-spacing: 3px;
           }
 
@@ -156,123 +177,130 @@ const Contact = () => {
           }           
         `}
       </style>
-      <div className="contact-div">
-      <div className="contact mx-auto row g-0 d-flex justify-content-center align-items-center vh-100">
-        <div className="col-12 mt-5 col-xl-6 d-flex justify-content-center justify-content-xl-start">
-          {isSubmitted ? (
-            <div>
-              <p className="heading ms-5 ms-xl-0">Get in touch</p>
-                <h4 className="mt-5 ms-5 ms-xl-0" style={{color: 'teal'}}>Thank you for your submission!</h4>
-            <button className="btn btn-dark mt-4 ms-5 ms-xl-0" type="button" onClick={handleReset}>
-                Send another message
-            </button>
-            </div>
-          ) : (
-            <div className="w-100">
-            <p className="heading ms-5 ms-xl-0">Get in touch</p>
-              <form
-                ref={form}
-                className="mt-5 d-flex flex-column align-items-center mx-auto mx-xl-0"
-                onSubmit={handleSubmit}
-              >
-                <div className="form-group d-flex flex-column w-100">
-                  <label htmlFor="name">Name:</label>
-                  <input type="text" id="name" name="name" required />
-                </div>
-                <div className="form-group d-flex flex-column w-100">
-                  <label htmlFor="email">Email:</label>
-                  <input type="email" id="email" name="email" required />
-                </div>
-                <div className="form-group d-flex flex-column w-100">
-                  <label htmlFor="subject">Subject:</label>
-                  <input type="text" id="subject" name="subject" required />
-                </div>
-                <div className="form-group d-flex flex-column w-100">
-                  <label htmlFor="message">Message:</label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows="5"
-                    required
-                  ></textarea>
-                </div>
-                <button className="btn text-white" type="submit" value="Send">
-                  Submit
-                </button>
-              </form>
-            </div>
-          )}
+      { showContact && (
+        <div className="contact-div">
+        <div className="contact mx-auto row g-0 d-flex justify-content-center align-items-center vh-100">
+          <div className="col-12 mt-5 col-xl-6 d-flex justify-content-center justify-content-xl-start">
+            {isSubmitted ? (
+              <div>
+                <p className="heading ms-5 ms-xl-0">Get in touch</p>
+                  <h4 className="mt-5 ms-5 ms-xl-0" style={{color: 'teal'}}>Thank you for your submission!</h4>
+              <button className="btn btn-dark mt-4 ms-5 ms-xl-0" type="button" onClick={handleReset}>
+                  Send another message
+              </button>
+              </div>
+            ) : (
+              <div className="w-100">
+              <div className="d-flex heading">
+              <p className="ms-5 ms-xl-0 me-2" style={{fontFamily: 'Ahganirya'}}>Get in touch</p>
+              <div className="divider ms-4" style={{transform: 'rotate(90deg)', marginTop: '-1.5vh', backgroundColor: 'rgb(0,180,180)'}}></div>
+              </div>
+                <form
+                  ref={form}
+                  className="mt-5 d-flex flex-column align-items-center mx-auto mx-xl-0"
+                  onSubmit={handleSubmit}
+                >
+                  <div className="form-group d-flex flex-column w-100">
+                    <label htmlFor="name">Name:</label>
+                    <input type="text" id="name" name="name" required />
+                  </div>
+                  <div className="form-group d-flex flex-column w-100">
+                    <label htmlFor="email">Email:</label>
+                    <input type="email" id="email" name="email" required />
+                  </div>
+                  <div className="form-group d-flex flex-column w-100">
+                    <label htmlFor="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject" required />
+                  </div>
+                  <div className="form-group d-flex flex-column w-100">
+                    <label htmlFor="message">Message:</label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      rows="5"
+                      required
+                    ></textarea>
+                  </div>
+                  <button className="btn text-white" type="submit" value="Send">
+                    Submit
+                  </button>
+                </form>
+              </div>
+            )}
+          </div>
+          <div className="col-12 col-xl-6" style={{marginTop: '7vh'}}>    
+          <div className="map align-items-center mt-5 ms-5 me-5 ms-xl-0 me-xl-0">
+          <MapContainer
+    className="full-height-map col"
+    center={[22.5726, 88.3639]}
+    zoom={11}
+    minZoom={3}
+    maxZoom={19}
+    maxBounds={[[-85.06, -180], [85.06, 180]]}
+    scrollWheelZoom={false}>
+    <TileLayer
+      attribution='&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="https://openstreetmap.org">OpenStreetMap</a> contributors'
+      url={`https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png?api_key=${apiKey}`}
+    />
+    <Marker position={[22.5726, 88.3639]} icon={redIcon}>
+      <Popup>
+        Kolkata, India
+      </Popup>
+    </Marker>
+  </MapContainer>
+          </div>
+  <div className="social mt-5">
+    <div className="divider mt-5 mb-5"></div>
+    <div className="d-flex">
+    <p className="ms-5 ms-xl-0 me-2" style={{fontFamily: 'Ahganirya', fontSize: '0.9rem', letterSpacing: '2px'}}>Still &nbsp; Interested</p>
+    --
+    </div>
+    <div className="social-links d-flex justify-content-center mt-4">
+      <img src={mail} className="me-3" width={45} height={45} alt='email' onClick={handleEmailClick} style={{cursor: 'pointer'}}/>
+      <a href="https://www.linkedin.com/in/soumita-basu-135505202/" style={{cursor: 'pointer'}}><img src={linkedin} alt='linkedin' className="me-3" width={45} height={45}/></a>
+      <a href="https://github.com/MiSu2002" style={{cursor: 'pointer'}}><img src={github} alt='github' className="me-3" width={45} height={45}/></a>
+      <a href="https://discordapp.com/users/sia#4172" style={{cursor: 'pointer'}}><img src={discord} alt='discord' className="me-3" width={45} height={45}/></a>
+      <a href="https://www.facebook.com/soumita.basu.980" style={{cursor: 'pointer'}}><img src={fb} alt='facebook' className="me-3" width={45} height={45}/></a>
+      <a href="https://www.instagram.com/samarabraun02/?next=%2F" style={{cursor: 'pointer'}}><img src={instagram} alt='instagram' width={45} height={45}/></a>
+    </div>
+  </div>
+  
+  <div className="resume mt-5">
+    <a className="text-decoration-none" href="https://drive.google.com/file/d/1azZsqzyPEtyV2pFZX5eAEc8WkT7jp85f/view?usp=sharing">
+    <button className="btn cv mx-auto d-flex">My Resume</button>
+    </a>
+    <div className="divider mt-5"></div>
+  </div>
+  
+          </div>
         </div>
-        <div className="col-12 col-xl-6" style={{marginTop: '7vh'}}>    
-        <div className="map align-items-center mt-5 ms-5 me-5 ms-xl-0 me-xl-0">
-        <MapContainer
-  className="full-height-map col"
-  center={[22.5726, 88.3639]}
-  zoom={11}
-  minZoom={3}
-  maxZoom={19}
-  maxBounds={[[-85.06, -180], [85.06, 180]]}
-  scrollWheelZoom={false}>
-  <TileLayer
-    attribution='&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="https://openstreetmap.org">OpenStreetMap</a> contributors'
-    url={`https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png?api_key=${apiKey}`}
+        <div className="toggle-button position-absolute d-none d-xl-block">
+        <ToggleButton
+    inactiveLabel={''}
+    activeLabel={''}
+    value={showBgImage}
+    onClick={handleToggle}
+    colors={{
+      activeThumb: {
+        base: 'rgb(250,250,250)',
+      },
+      inactiveThumb: {
+        base: 'rgb(0,180,180)',
+      },
+      active: {
+        base: 'rgb(80,180,180)',
+        hover: 'rgb(107, 150, 150)',
+      },
+      inactive: {
+        base: 'rgb(65,66,68)',
+        hover: 'rgb(95,96,98)',
+      }
+    }}
   />
-  <Marker position={[22.5726, 88.3639]} icon={redIcon}>
-    <Popup>
-      Kolkata, India
-    </Popup>
-  </Marker>
-</MapContainer>
-        </div>
-<div className="social mt-5">
-  <div className="divider mt-5 mb-5"></div>
-  <div className="d-flex">
-  <p className="ms-5 ms-xl-0 me-2" style={{fontFamily: 'Ahganirya', fontSize: '0.9rem', letterSpacing: '2px'}}>Still &nbsp; Interested</p>
-  --
+  
   </div>
-  <div className="social-links d-flex justify-content-center mt-4">
-    <img src={mail} className="me-3" width={45} height={45} alt='email' onClick={handleEmailClick} style={{cursor: 'pointer'}}/>
-    <a href="https://www.linkedin.com/in/soumita-basu-135505202/" style={{cursor: 'pointer'}}><img src={linkedin} alt='linkedin' className="me-3" width={45} height={45}/></a>
-    <a href="https://github.com/MiSu2002" style={{cursor: 'pointer'}}><img src={github} alt='github' className="me-3" width={45} height={45}/></a>
-    <a href="https://discordapp.com/users/sia#4172" style={{cursor: 'pointer'}}><img src={discord} alt='discord' className="me-3" width={45} height={45}/></a>
-    <a href="https://www.facebook.com/soumita.basu.980" style={{cursor: 'pointer'}}><img src={fb} alt='facebook' className="me-3" width={45} height={45}/></a>
-    <a href="https://www.instagram.com/samarabraun02/?next=%2F" style={{cursor: 'pointer'}}><img src={instagram} alt='instagram' width={45} height={45}/></a>
-  </div>
-</div>
-
-<div className="resume mt-5">
-  <button className="btn cv mx-auto d-flex">Download my resume</button>
-  <div className="divider mt-5"></div>
-</div>
-
         </div>
-      </div>
-      <div className="toggle-button position-absolute d-none d-xl-block">
-      <ToggleButton
-  inactiveLabel={''}
-  activeLabel={''}
-  value={showBgImage}
-  onClick={handleToggle}
-  colors={{
-    activeThumb: {
-      base: 'rgb(250,250,250)',
-    },
-    inactiveThumb: {
-      base: 'rgb(0,180,180)',
-    },
-    active: {
-      base: 'rgb(80,180,180)',
-      hover: 'rgb(107, 150, 150)',
-    },
-    inactive: {
-      base: 'rgb(65,66,68)',
-      hover: 'rgb(95,96,98)',
-    }
-  }}
-/>
-
-</div>
-      </div>
+      )}
     </div>
   );
 };

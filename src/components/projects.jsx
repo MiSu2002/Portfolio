@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 const Projects = ({ projects }) => {
   
@@ -18,7 +17,7 @@ const Projects = ({ projects }) => {
                     gap: 2rem;
                     scroll-snap-points-x: repeat(100%);
                     scroll-snap-type: x mandatory;
-                    width: 100vw;
+                    width: 150vw;
                   }
                   
                   .project-card {
@@ -72,26 +71,17 @@ const Projects = ({ projects }) => {
                   
                   .project-card a:hover {
                     background-color: rgb(0,128,128,0.6);
-                  }
-
-                  .next {
-                    right: 5%;
-                    margin-top: 30vh;
-                    background-color: rgb(0, 200, 200, 0.7);
-                    border-radius: 70px;
-                    padding: 2% 1%;
-                    box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.5);
-                  }                  
+                  }                 
 
                   @media screen and (max-width: 1200px) {
                     .projects-slider{
-                      width: calc(200vw - 50px);
+                      width: calc(390vw - 50px);
                     }
                     .project-card{
-                      height: 60vh;
+                      height: 70vh;
                     }
                     .project-card img{
-                      height: 40vh;
+                      height: 50vh;
                     }
                     .projects-slider-container{
                       width: 100%;
@@ -109,15 +99,11 @@ const Projects = ({ projects }) => {
             className="project-card ms-5 mt-5 d-flex flex-column justify-content-center align-items-center"
                 style={{ background: `linear-gradient(to left, rgba(0,128,128, 0.2), rgba(0, 0, 0, 0.7)), url(${project.image})`}}>
               <img src={project.image} alt={project.name}/>
-              <h3 className="text-center mt-2">{project.name}</h3>
-              <p className="text-center">{project.description}</p>
-              <div className="d-flex">
-              <a href={project.link} className="mt-2 me-3">View project</a>
-              <Link to={`/projects/${project.id}`} className="mt-2 bg-secondary">Know More</Link>
-              </div>
+              <h3 className="text-center mt-2 ps-3 pe-3">{project.name}</h3>
+              <p className="text-center ps-3 pe-3">{project.description}</p>
+              <a href={project.link} className="mt-2 m-3">View project</a>
             </div>
           ))}
-          <button className="btn next position-absolute text-black d-none d-md-block" >{`>`}</button>
         </div>
       </div>
     );
