@@ -81,6 +81,29 @@ const Education = () => {
                     <p className="mb-5 hi"> - Educational Background</p>
                     <div className="divider mb-lg-5" style={{marginTop: '10vh'}}></div>
                     <div className="mt-5 p-3 p-xl-4 para d-flex">
+                        <p className="me-2" style={{color: 'rgb(0,180,180)'}}>Institution</p>
+                        <p style={{color: 'rgb(0,180,180)'}}>:</p>
+                        <p className="ms-4">Indian Institute of Technology, Madras</p>
+                        </div>
+                        <div className="mt-5 p-3 p-xl-4 row para">
+                        <div className="col d-flex">
+                        <p className="me-2" style={{color: 'rgb(0,180,180)'}}>Course</p>
+                        <p style={{color: 'rgb(0,180,180)'}}>:</p>
+                        <p className="ms-4">B.S.</p>
+                        </div>
+                        <div className="col d-flex justify-content-end">
+                        <p className="me-2" style={{color: 'rgb(0,180,180)'}}>Stream</p>
+                        <p style={{color: 'rgb(0,180,180)'}}>:</p>
+                        <p className="ms-4">Data Science and Applications</p>
+                        </div>
+                        </div>
+                        <div className="mt-4 p-3 p-xl-4 para d-flex">
+                        <p className="me-2" style={{color: 'rgb(0,180,180)'}}>Graduation Year</p>
+                        <p style={{color: 'rgb(0,180,180)'}}>:</p>
+                        <p className="ms-4">2027</p>
+                        </div>
+                    <div className="divider mt-lg-5 mb-lg-5"></div>
+                    <div className="mt-5 p-3 p-xl-4 para d-flex">
                         <p className="me-2" style={{color: 'rgb(0,180,180)'}}>University</p>
                         <p style={{color: 'rgb(0,180,180)'}}>:</p>
                         <p className="ms-4">Maulana Abdul Kalam Azad University of Technology</p>
@@ -107,7 +130,7 @@ const Education = () => {
                         <p style={{color: 'rgb(0,180,180)'}}>:</p>
                         <p className="ms-4">2024</p>
                         </div>
-                    <div className="divider mt-lg-5 mb-lg-5"></div>
+                        <div className="divider mt-lg-5 mb-lg-5"></div>
                     </div>
                     <p className={`hello hello2 position-absolute ${helloRotate ? 'rotate-0 rotate1 w-100 position-sticky' : ''}`}>- Education</p>
                     </div>

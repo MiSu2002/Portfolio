@@ -265,8 +265,8 @@ useEffect(() => {
     </div>
   </div>
   
-  <div className="resume mt-5">
-    <a className="text-decoration-none" href="https://drive.google.com/file/d/1azZsqzyPEtyV2pFZX5eAEc8WkT7jp85f/view?usp=sharing">
+  <div className="resume mt-5 mb-3">
+    <a className="text-decoration-none" href="https://docs.google.com/document/d/1Mpt7TO_tjxpBEE63vlinIsMUy3_zTdWmsX1Katy-ZsE/edit?usp=sharing">
     <button className="btn cv mx-auto d-flex">My Resume</button>
     </a>
     <div className="divider mt-5"></div>

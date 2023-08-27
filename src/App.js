@@ -47,6 +47,16 @@ const projects = [
 const careers = [
   {
     id: 1,
+    job_title: 'Software Engineer Intern',
+    company: 'SigiloTech, Kolkata',
+    description: [
+      'Hands-on with PowerApps, Power Automate and SharePoint',
+    ],
+    from: 'July 2023',
+    to: 'August 2023',
+  },
+  {
+    id: 2,
     job_title: 'Azure Developer Intern',
     company: 'Microsoft-EY-Future Ready Talent',
     description: [
@@ -57,10 +67,10 @@ const careers = [
       'Link to my project (Github): https://github.com/MiSu2002/Portfolio',
     ],
     from: 'June 2022',
-    to: 'Present',
+    to: 'April 2023',
   },
   {
-    id: 2,
+    id: 3,
     job_title: 'Anroid App Developer Intern',
     company: 'AICTE-Google-SmartInternz',
     description: [
@@ -76,7 +86,7 @@ const careers = [
     to: 'September 2022',
   },
   {
-    id: 3,
+    id: 4,
     job_title: 'Front-End Developer Intern (On-Site)',
     company: 'Graphe, Kolkata',
     description: [
@@ -91,7 +101,7 @@ const careers = [
     to: 'June 2022',
   },
   {
-    id: 4,
+    id: 5,
     job_title: 'Mechine Learning Student',
     company: 'Udacity-Amazon',
     description: [
@@ -107,7 +117,7 @@ const careers = [
     to: 'September 2022',
   },
   {
-    id: 5,
+    id: 6,
     job_title: 'Virtual Programme Student',
     company: 'Goldman Sachs Company',
     description: [
@@ -118,7 +128,7 @@ const careers = [
     to: 'July 2022',
   },
   {
-    id: 6,
+    id: 7,
     job_title: 'Google Developer Students Clubs (GDSC)',
     company: 'Goldman Sachs Company',
     description: [

@@ -5,9 +5,10 @@ const progressesData = [
     { skill: "C++", percent: 93 },
     { skill: "Java / OOP", percent: 90 },
     { skill: "React", percent: 93 },
-    { skill: "NodeJS", percent: 85 },
+    { skill: "Power Platform", percent: 90 },
     { skill: "MongoDB / SQL", percent: 75 },
     { skill: "DSA", percent: 88 },
+    { skill: "NodeJS", percent: 85 },
     { skill: "AI / ML", percent: 75 },
     { skill: "Linux", percent: 90 },
     { skill: "CyberSecurity", percent: 85 },
@@ -103,15 +104,17 @@ const About = () => {
                     <div className="divider mt-lg-5 mb-lg-5"></div>
                     <p className="mt-4 p-3 p-xl-4 para">I am Soumita Basu from Kolkata, India.</p>
                     <div className="divider mt-lg-5 mb-lg-5"></div>
-                    <p className="mt-4 p-3 p-xl-4 para">I am a junior undergraduate, currently pursuing B.Tech in Computer Science and Engineering from Maulana Abdul Kalam Azad University of Technology, Kolkata.</p>
+                    <p className="mt-4 p-3 p-xl-4 para">I am a senior undergraduate, currently pursuing B.Tech in Computer Science and Engineering from Maulana Abdul Kalam Azad University of Technology, Kolkata.</p>
+                    <div className="divider mt-lg-5 mb-lg-5"></div>
+                    <p className="mt-4 p-3 p-xl-4 para">I am also pursuing B.S. in Data Science from Indian Institute of Technology, Madras.</p>
                     <div className="divider mt-lg-5 mb-lg-5"></div>
                     <p className="mt-4 p-3 p-xl-4 para">I have gained both professional and student experiences in some of the most renowned product-based companies like Google, Amazon, Microsoft-EY and Goldman Sachs, and have worked with the latest technologies.</p>
                     <div className="divider mt-lg-5 mb-lg-5"></div>
-                    <p className="mt-4 p-3 p-xl-4 para">I am currently working as an Azure Developer Intern in Microsoft-Future Ready Talent. I am also a student in AWS Machine Learning, sponsored by Amazon Web Services.</p>
+                    <p className="mt-4 p-3 p-xl-4 para">Recently, I have worked as a Software Engineer Intern in SigiloTech, Kolkata.</p>
                     <div className="divider mt-lg-5 mb-lg-5"></div>
-                    <p className="mt-4 p-3 p-xl-4 para">Previously, I have worked in Front-end Development for Graphe, Kolkata and Android App Development for AICTE-SmartInternz-Google.</p>
+                    <p className="mt-4 p-3 p-xl-4 para">Previously, I have worked as Front-end Developer in Graphe, Kolkata; Azure Developer Intern in Microsoft-Future Ready Talent and Android App Developer Intern in AICTE-SmartInternz-Google.</p>
                     <div className="divider mt-lg-5 mb-lg-5"></div>
-                    <p className="mt-4 p-3 p-xl-4 para"> I have attended a Forage Engineering Programme hosted by Goldman Sachs and I have also worked as the Core Team Program Lead for the Google Developer Student Clubs on our campus.</p>
+                    <p className="mt-4 p-3 p-xl-4 para">I have attended AWS Machine Learning course, sponsored by Amazon Web Services and Forage Engineering Programme hosted by Goldman Sachs.</p>
                     <div className="divider mt-lg-5 mb-lg-5"></div>
                     </div>
                     <Skills data={progressesData} skillTitle={"Technical"}/>
